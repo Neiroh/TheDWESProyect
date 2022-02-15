@@ -69,4 +69,4 @@ El sistema debe asegurar los datos de los usuarios (contraseña, correo electró
 - idImg foreign key
 - idUser foreign key
 ### Modelo E-R
-
+[Modelo-Draw-IO](https://app.diagrams.net/#HNeiroh%2FTheDWESProyect%2Fmain%2FGalorER)
