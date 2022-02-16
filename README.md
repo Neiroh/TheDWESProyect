@@ -44,29 +44,9 @@ El sistema debe asegurar los datos de los usuarios (contraseña, correo electró
 
 ### Arquitectura/Patrón
 
-
 ### Diagrama de Clases
 
-
-### Especificaciones BD
-
-*Imagen*
-- id integer NN
-- likes integer 
-- comentario foreign key
-
-*Usuario*
-- id integer NN
-- nombre varchar NN
-- ap1 varchar NN
-- ap2 varchar
-- correo varchar NN
-- passwd varchar NN
-
-*LikeImagen*
-
-*ImagenUser*
-- idImg foreign key
-- idUser foreign key
 ### Modelo E-R
 [Modelo-Draw-IO](https://app.diagrams.net/#HNeiroh%2FTheDWESProyect%2Fmain%2FGalorER)
+
+### Modelo Relacional
