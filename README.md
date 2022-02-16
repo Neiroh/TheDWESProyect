@@ -46,7 +46,5 @@ El sistema debe asegurar los datos de los usuarios (contraseña, correo electró
 
 ### Diagrama de Clases
 
-### Modelo E-R
+### Modelo E-R | Modelo Relacional
 [Modelo-Draw-IO](https://app.diagrams.net/#HNeiroh%2FTheDWESProyect%2Fmain%2FGalorER)
-
-### Modelo Relacional
