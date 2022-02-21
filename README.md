@@ -40,6 +40,8 @@ El sistema debe asegurar los datos de los usuarios (contraseña, correo electró
 
 ### Diagrama de Casos de Uso
 
+HECHO.
+
 ## Diseño Lógico
 
 ### Arquitectura/Patrón
@@ -48,3 +50,11 @@ El sistema debe asegurar los datos de los usuarios (contraseña, correo electró
 
 ### Modelo E-R | Modelo Relacional
 [Modelo-Draw-IO](https://app.diagrams.net/#HNeiroh%2FTheDWESProyect%2Fmain%2FGalorER)
+
+### Gamma Cromática
+
+- Colores: Principal: #10A3EB | Secundario: #EEEEEE
+
+### WIREFRAME
+
+Un wirefire dptm.
