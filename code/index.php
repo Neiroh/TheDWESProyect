@@ -19,10 +19,12 @@
 
         <nav>
 
-            <div class="botonRegistro"><p>Regístrate</p></div>
-            <div class="botonInicio"><p>Iniciar Sesión</p></div>
+            <div class="botonRegistro" onclick="oscurece()"><p>Regístrate</p></div>
+            <div class="botonInicio" onclick="oscurece()"><p>Iniciar Sesión</p></div>
 
         </nav>
+
+        <div id="capaOscura">
 
         <div class="buscador">
 
@@ -50,17 +52,34 @@
 
         <div class="contenedorImagenes">
 
-            
+
+
+        </div>
 
         </div>
 
     </main>
 
     <footer>
-
-
-
     </footer>
+
+    <script>
+
+        //Función para oscurecer toda la página al pulsar sobre el inicio de sesión o el registro
+        function oscurece(){
+
+            let capaOscura = document.getElementById("capaOscura");
+
+            capaOscura.style.backgroundColor = "black";
+            capaOscura.style.width = "100vw";
+            capaOscura.style.height = "100vh";
+            capaOscura.style.opacity = "60%";
+            capaOscura.style.position = "relative";
+            capaOscura.style.zIndex = "2";
+
+        }
+    
+    </script>
 
 </body>
 </html>
