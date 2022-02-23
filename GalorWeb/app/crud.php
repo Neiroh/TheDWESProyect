@@ -60,6 +60,8 @@
     *
     *@param $correo recoge el correo con el que se quiere iniciar sesión
     *@param $passwd recoge la contraseña del correo con la que se quiere iniciar sesión
+    *
+    *@return un boolean para saber si el inicio se ha realizado con éxito
     */
     function iniciarSesion($correo, $passwd){
 
@@ -130,6 +132,7 @@
     *
     *@param $correo guarda el correo del usuario del que queremos ver el perfil
     *
+    *@return un un array asociativo con los datos que queremos mostrar en el perfil
     */
     function muestraDatosUsuario($correo){
 
