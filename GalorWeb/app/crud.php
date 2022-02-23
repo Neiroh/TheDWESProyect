@@ -188,8 +188,10 @@
 
         }
 
+        //Establecemos los nuevos valores
         $db->query("UPDATE user SET nombreUser = '$nombreNuevo', correoUser = '$correoNuevo' WHERE correoUser = '$correoViejo'");
 
     }
+    
 
 ?>
