@@ -42,8 +42,11 @@ CREATE TABLE IF NOT EXISTS coment(
         ON UPDATE CASCADE
 );
 
+CREATE USER 'arce'@'localhost' IF NOT EXISTS IDENTIFIED BY '123456';
+GRANT ALL ON galor.* TO 'arce'@'localhost';
+
 CREATE USER 'ahmed'@'localhost' IDENTIFIED BY '123456';
 GRANT ALL ON galor.* TO 'ahmed'@'localhost';
 
-CREATE USER 'jesusro'@'localhost' IDENTIFIED BY '123456';
+CREATE USER 'jesusro'@'localhost' IF NOT EXISTS IDENTIFIED BY '123456';
 GRANT ALL ON galor.* TO 'jesusro'@'localhost';
