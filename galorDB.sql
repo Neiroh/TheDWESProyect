@@ -41,3 +41,9 @@ CREATE TABLE IF NOT EXISTS coment(
         ON DELETE CASCADE
         ON UPDATE CASCADE
 );
+
+CREATE USER 'ahmed'@'localhost' IDENTIFIED BY '123456';
+GRANT ALL ON galor.* TO 'ahmed'@'localhost';
+
+CREATE USER 'jesusro'@'localhost' IDENTIFIED BY '123456';
+GRANT ALL ON galor.* TO 'jesusro'@'localhost';
