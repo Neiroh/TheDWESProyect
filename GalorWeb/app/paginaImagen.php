@@ -17,7 +17,8 @@
 
         }
 
-        $consulta = $db->query("SELECT u.nombreUser, u.fotoPerfil, c.text FROM user u INNER JOIN coment c ON c.idUser = u.idUser INNER JOIN img ON ")
+        $consulta = $db->query("SELECT u.nombreUser, u.fotoPerfil, c.text FROM user u INNER JOIN coment c ON c.idUser = u.idUser INNER JOIN img i ON i.idImg = c.idImg");
+        
 
     }
 
