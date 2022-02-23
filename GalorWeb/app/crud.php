@@ -164,4 +164,32 @@
 
     }
 
+    /*
+    *Función para editar usuarios
+    *
+    *@param $correoViejo almacena el correo de la cuenta a la que queremos modificar los datos
+    *@param $nombreNuevo almacena el nuevo nombre que queremos poner
+    *@param $correoNuevo almacena el nuevo correo que queremos almacenar
+    */
+    function editaUser($correoViejo, $nombreNuevo, $correoNuevo){
+
+        //Comprobamos que la conexión se realice con éxito
+        try{
+            $db = new mysqli('localhost', 'galorDB', 'arce', '123456');
+
+            if($db->connect_errno){
+
+                throw new Exception("No se ha podido acceder a la basede datos");
+
+            }
+        }catch(Exception $ex){
+
+            echo "Excepción $ex <br>";
+
+        }
+
+        $db->query("UPDATE user SET nombreUser = '$nombreNuevo', correoUser = '$correoNuevo' WHERE correoUser = '$correoViejo'");
+
+    }
+
 ?>

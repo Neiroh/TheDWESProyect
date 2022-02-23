@@ -31,10 +31,10 @@
     /*
     *Función para subir la foto de perfil del usuario
     *
-    *@param $correo almacena el correo
-    *
+    *@param $correo almacena el correo del usuario al que quremos añadirle o editar la imagen
+    *@param $imaage almacena la imagen
     */
-    function fotoPerfil($correo, $img){
+    function fotoPerfil($correo, $image){
 
         try{
             $db = new mysqli('localhost', 'galorDB', 'arce', '123456');
@@ -50,6 +50,17 @@
 
         }
 
+        //Usamos las siguientes líneas para saber si tenemos que añadir una imagen o simplemente cambiarla
+        $recibeImagen = $db->query("SELECT fotoPerfil FROM user WHERE correoUser = '$correo'");
+        $comprueba = $recibeImagen->fetch_object();
+
+        if($comprueba != NULL){
+
+            $imgContent = addslashes(file_get_contents($image));
+
+            $db->query("UPDATE user SET fotoPerfil = '$imgContent' WHERE correoUser = '$correo'");
+
+        }else{
             $imgContent = addslashes(file_get_contents($image));
                     
             $insert = $db->query("INSERT INTO user (fotoPerfil) VALUES ('$imgContent') WHERE correoUser = '$correo'");
@@ -58,10 +69,7 @@
             }else{
                 echo "<p>Error al subir el archivo a la base de datos</p>";
             } 
-
-        }else{
-            echo "Selecciona un archivo para subir.";
-        }
+        }      
     }
     
 
