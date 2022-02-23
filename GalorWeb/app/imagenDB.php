@@ -1,7 +1,14 @@
 <?php
 
+    /*
+    *Función para subir el id de la imagen de la API a nuestra base de datos
+    *
+    *@param $id almacena el id que trae desde la API para subirlo a nuestra base de datos
+    *
+    */
     function subeImagen($id){
 
+        //Comprobamos que la conexión se realice con éxito
         try{
             $db = new mysqli('localhost', 'galorDB', 'arce', '123456');
 
@@ -16,10 +23,17 @@
 
         }
 
+        //Subimos el id a la base de datos
         $db->query("INSERT INTO img VALUES ($id)");
 
     }
 
+    /*
+    *Función para subir la foto de perfil del usuario
+    *
+    *@param $correo almacena el correo
+    *
+    */
     function fotoPerfil($correo, $img){
 
         try{
@@ -36,9 +50,6 @@
 
         }
 
-        $check = getimagesize($_FILES["image"]["tmp_name"]);
-        if($check !== false){
-            $image = $_FILES['image']['tmp_name'];
             $imgContent = addslashes(file_get_contents($image));
                     
             $insert = $db->query("INSERT INTO user (fotoPerfil) VALUES ('$imgContent') WHERE correoUser = '$correo'");
@@ -52,5 +63,6 @@
             echo "Selecciona un archivo para subir.";
         }
     }
+    
 
 ?>
