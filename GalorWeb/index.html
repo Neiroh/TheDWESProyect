@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Image Search App">
+    <meta name="keywords" content="HTML,CSS,JavaScript, images, API">
+    <meta name="author" content="Neha Soni">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galor</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Galor</h1>
+    </header>
+    <main>
+
+        <nav>
+
+            <form action="./busqueda.html">
+
+                <input type="text" class="inputBusqueda" placeholder="Inserta el nombre de las fotos que quieras buscar">
+
+                <input type="submit" name="enviaBusqueda" id="enviaBusqueda" class="enviaBusqueda boton">
+
+            </form>
+
+            <div class="boton registro">Regístrate</div>
+            <div class="boton inicioSesion">Iniciar Sesión</div>
+
+        </nav>
+
+        <div class="Registro">
+
+            <form action="./registrar.php" method="post">
+
+                <p>
+                    <label for="correoRegistro">Correo electrónico: </label>
+                    <input type="text" name="correoRegistro" placeholder="micorreo@correo.com" class="inserta registro">
+                </p>
+
+                <p>
+                    <label for="nombreRegistro">Nombre: </label>
+                    <input type="text" name="nombreRegistro" placeholder="Inserta tu nombre" class="inserta registro">
+                </p>
+
+                <p>
+                    <label for="passRegistro">Contraseña: </label>
+                    <input type="password" name="passRegistro" placeholder="micorreo@correo.com" class="inserta registro">
+                </p>
+
+            </form>
+
+        </div>
+
+        <div class="sesion">
+
+            <form action="./inicioSesion.php" method="post">
+
+                <p>
+                    <label for="correoSesion">Correo electrónico: </label>
+                    <input type="text" name="correoSesion" placeholder="micorreo@correo.com" class="inserta inicioS">
+                </p>
+
+                <p>
+                    <label for="passRegistro">Contraseña: </label>
+                    <input type="password" name="passRegistro" placeholder="micorreo@correo.com" class="inserta inicioS">
+                </p>
+
+            </form>
+
+        </div>
+
+        <div class="capaOscura">
+
+            <div class="contenedorImagenes">
+
+
+
+            </div>
+
+        </div>
+
+    </main>
+    <footer>
+
+    </footer>
+    <script src="./index.js"></script>
+</body>
+
+</html>
