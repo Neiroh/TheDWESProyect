@@ -34,7 +34,7 @@
 
         //Comprobamos que se pueda realizar la consulta
         try{
-            $db->query("INSERT INTO user('nombreUser', 'passwd', 'correoUser') VALUES ($nombre, $correo, $passwd)");
+            $db->query("INSERT INTO user('nombreUser', 'passwd', 'correoUser') VALUES ('$nombre', '$correo', '$passwd')");
 
             $consulta = $db->query("SELECT nombreUser FROM user WHERE correoUser = '$correo'");
 
