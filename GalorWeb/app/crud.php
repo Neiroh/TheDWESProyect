@@ -36,7 +36,7 @@
         try{
             $consulta = $db->query("SELECT nombreUser FROM user WHERE correoUser = '$correo'");
 
-            if($res = $consulta->fetch_object()){
+            if($consulta->fetch_object()){
 
                 //Si da error de que ya existe el usuario lanzamos una excepción
                 throw new Exception("Ese usuario ya existe");
