@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*Letra 
+    font-family: 'Comfortaa', cursive;
+    font-family: 'Raleway', sans-serif;
+    Colores:
+    #10A3EB
+    #EEEEEE
+    */
+}
+/********* Empieza encabezado **********/
+header{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #EEEEEE;
+    font-family: 'Comfortaa', cursive;
+}
+.logo img{
+    width: 100px;
+}
+hr{
+    border: 1.5px solid black;
+}
+/*La camara y el titulo Galor*/
+.logo{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-left: 30px;
+}
+.logo h1{
+    text-shadow: 0px 5px 5px #10A3EB;
+    font-size: 3.5em;
+    margin-left: 10px;
+}
+/*Usuario y foto de perfil cuando se inicia sesión*/
+.perfil{
+
+
+    display: none;
+    
+}
+/*Botones de registrarse y iniciar sesión*/
+.sesion{
+    display: flex;
+    flex-flow: row;
+    margin-right: 40px;
+}
+/*Propiedades de los propios botones*/
+.registro,.inicioSesion{
+    background-color: black;
+    color: #EEEEEE;
+    font-size: 1.4em;
+    width: 180px;
+    height: 50px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 3px 5px 5px #10A3EB;
+    cursor: pointer;
+}
+img{
+    width: 100%;
+}
+main{
+    position: relative;
+}
+/*Capa de registro*/
+.Registro{
+    position: absolute;
+    font-family: 'Comfortaa', cursive;
+    background-color: #EEEEEE;
+    text-shadow: 1px 2px 2px #10A3EB;
+    box-shadow: 3px 4px 6px black;
+    border-radius: 10px;
+    padding: 30px;
+    font-size: 2em;
+    right: 10%;
+    top: -20px;
+    height: 530px;
+
+
+    display: none;
+
+}
+/*Texto y label de registro*/
+.Registro input{
+    font-family: 'Raleway', sans-serif;
+    height: 40px;
+    margin: 10px;
+    margin-right: 30px;
+    padding-left: 10px;
+    margin-bottom: 30px;
+    font-size: 0.8em;
+}
+/*Botón de registro final*/
+.Registro .completaRegistro {
+    background-color: black;
+    color: #EEEEEE;
+    font-size: 1.1em;
+    width: 200px;
+    height: 80px;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 95px;
+    margin-top: 10px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 3px 5px 5px #10A3EB;
+    cursor: pointer;
+    font-weight: bold;
+}
+/*Error de falta datos*/
+.Registro p:last-child{
+    margin-left: 92px;
+    color: red;
+}
+/*Capa de login (como la de registro)*/
+.login{
+    position: absolute;
+    font-family: 'Comfortaa', cursive;
+    background-color: #EEEEEE;
+    text-shadow: 1px 2px 2px #10A3EB;
+    box-shadow: 3px 4px 6px black;
+    border-radius: 10px;
+    padding: 30px;
+    font-size: 2em;
+    right: 2%;
+    top: -20px;
+    height: 390px;
+
+
+    display: none;
+    
+}
+/*Texto y label de login*/
+.login input{
+    font-family: 'Raleway', sans-serif;
+    height: 40px;
+    margin: 10px;
+    margin-right: 30px;
+    padding-left: 10px;
+    margin-bottom: 30px;
+    font-size: 0.8em;
+}
+/*Botón de login final*/
+.login .completaLogin{
+    background-color: black;
+    color: #EEEEEE;
+    font-size: 1.1em;
+    width: 250px;
+    height: 80px;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 70px;
+    margin-top: 5px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 3px 5px 5px #10A3EB;
+    cursor: pointer;
+    font-weight: bold;
+}
+/******** Fin de encabezado *********/
+
+/********* Cuerpo ***********/
+main{
+    background-color: #EEEEEE;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/*Tamaño del buscador*/
+.inputBusqueda{
+    width: 30%;
+}
+/*Disposicion*/
+.search{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 30px;
+}
+/*Input Buscador...*/
+.search input{
+    font-family: 'Raleway', sans-serif;
+    height: 30px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    padding: 5px;
+}
+/*Botón del buscador*/
+.search input:last-child{
+    font-family: 'Raleway', sans-serif;
+    width: 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #EEEEEE;
+    background-color: black;
+    padding: 0;
+    position: absolute;
+    right: 35.4%;
+    top:28.5px;
+}
+/*Donde las imagenes*/
+.contenedorImagenes{
+    background-color: #EEEEEE;
+    height: 100%;
+}
+/*Capa por encima que sera transparente*/
+.capaOscura{
+    background-color: #EEEEEE;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*Boton de Cargar más*/
+.capaOscura button{
+    font-family: 'Raleway', sans-serif;
+    margin: 20px;
+    width: 20%;
+    height: 30px;
+    font-size: 1.5em;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: black;
+    color: #EEEEEE;
+    border-radius: 10px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/********* Fin del Cuerpo ***********/
+
+/*Pie de página*/
+footer{
+    font-family: 'Comfortaa', cursive;
+    background-color: #10A3EB;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    bottom: 0;
+}
