@@ -34,14 +34,16 @@
 
         //Comprobamos que se pueda realizar la consulta
         try{
-            $db->query("INSERT INTO user(nombreUser, passwd, correoUser) VALUES ('$nombre', '$correo', '$passwd')");
-
             $consulta = $db->query("SELECT nombreUser FROM user WHERE correoUser = '$correo'");
 
             if($res = $consulta->fetch_object()){
 
                 //Si da error de que ya existe el usuario lanzamos una excepción
                 throw new Exception("Ese usuario ya existe");
+
+            }else{
+
+                $db->query("INSERT INTO user(nombreUser, passwd, correoUser) VALUES ('$nombre', '$correo', '$passwd')");
 
             }
 
