@@ -19,12 +19,12 @@
 
     <?php
 
-        $correoViejo = $_SESSION['correo'];
+        //$correoViejo = $_SESSION['correo'];
 
         include "./app/crud.php";
-        $datos = muestraDatosUsuario($correo);
+        //$datos = muestraDatosUsuario($correo);
 
-        if($_POST['guardar']){
+        /*if($_POST['guardar']){
 
             editaUser($correoViejo, $_POST['ususario'], $_POST['correo']);
 
@@ -34,7 +34,7 @@
 
             fotoPerfil($correo, $_POST['cambiaFoto']);
 
-        }
+        }*/
 
     ?>
 
@@ -65,13 +65,13 @@
 
         <form action="#" method="post">
 
-            <h2><?php $datos["nombre"]; ?></h2>
+            <h2><?php //$datos["nombre"]; ?></h2>
             <input id="usuario" type="text" value=" > Cambiar nombre de usuario" class="botonCambio" name="usuario" onclick="cambiaUsuario()" readonly>
 
             <div class="lineaSeparadora"></div>
 
             <h3>Correo</h3>
-            <input type="text" name="correo" id="correo" class="input inputCorreo" value="<?php $datos["correo"]; ?>" onclick="cambiaCorreo()" readonly>
+            <input type="text" name="correo" id="correo" class="input inputCorreo" value="<?php //$datos["correo"]; ?>" onclick="cambiaCorreo()" readonly>
 
             <input type="submit" value="Guardar cambios" class="boton guardar" name="guardar" onclick="vuelveNormal()">
 
