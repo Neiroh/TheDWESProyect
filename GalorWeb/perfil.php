@@ -10,6 +10,27 @@
 
 <body>
 
+    <?php
+
+        $correoViejo = $_SESSION['correo'];
+
+        include "./app/crud.php";
+        $datos = muestraDatosUsuario($correo);
+
+        if($_POST['guardar']){
+
+            editaUser($correoViejo, $_POST['ususario'], $_POST['correo']);
+
+        }
+
+        if($_POST['cambiaFoto']){
+
+            fotoPerfil($correo, $_POST['cambiaFoto']);
+
+        }
+
+    ?>
+
     <header>
 
         <div class="logo">
@@ -20,25 +41,38 @@
         <div class="perfil">
             <h3>Nombre Perfil</h3>
             <input type="button" name="perfil" id="perfil" value="V">
-            <img src="" alt="foto_perfil" class="fotoPerfilTop">
+            <img src="data:image/png;base64, <?php base64_encode($dato["foto"]);?>" alt="foto_perfil" class="fotoPerfilTop">
         </div>
 
     </header>
 
     <main>
+        <form action="#" method="post">
 
-        <img src="" alt="foto_perfil">
-        <input type="button" value="Cambiar foto" class="botonCambio">
+            <img src="data:image/png;base64, <?php base64_encode($dato["foto"]);?>" alt="foto_perfil">
+            <input type="file" value="Cambiar foto" class="botonCambio" name="fotoPerfil">
 
-        <h3>Nombre Perfil</h3>
-        <input type="button" value=" > Cambiar nombre de usuario" class="botonCambio">
+            <input type="submit" value="Cambiar foto" name="cambiaFoto" class="boton cambiaFoto">
 
-        <div class="lineaSeparadora"></div>
+        </form>
 
-        <h3>Email</h3>
-        <input type="text" name="correo" id="correo" class="input inputCorreo">
+        <form action="#" method="post">
+
+            <h2><?php $datos["nombre"]; ?></h2>
+            <input id="usuario" type="text" value=" > Cambiar nombre de usuario" class="botonCambio" name="usuario" onclick="cambiaUsuario()" readonly>
+
+            <div class="lineaSeparadora"></div>
+
+            <h3>Correo</h3>
+            <input type="text" name="correo" id="correo" class="input inputCorreo" value="<?php $datos["correo"]; ?>" onclick="cambiaCorreo()" readonly>
+
+            <input type="submit" value="Guardar cambios" class="boton guardar" name="guardar" onclick="vuelveNormal()">
+
+        </form>
 
     </main>
+
+    <script src="./js/cambiaDatos.js"></script>
 </body>
 
 </html>
