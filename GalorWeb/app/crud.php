@@ -15,7 +15,7 @@
 
         //Intentamos iniciar la conexión en la base de datos
         try{
-            $db = new mysqli('localhost', "arce", "123456", "galorDB");
+            $db = new mysqli('localhost', "ahmed", "123456", "galorDB");
 
             if($db->connect_errno){
 
@@ -43,7 +43,7 @@
 
             }else{
 
-                $db->query("INSERT INTO user(nombreUser, passwd, correoUser) VALUES ('$nombre', '$correo', '$passwd')");
+                $db->query("INSERT INTO user(nombreUser, passwd, correoUser) VALUES ('$nombre', '$passwd', '$correo')");
 
             }
 
@@ -70,7 +70,7 @@
     function iniciarSesion($correo, $passwd){
 
         try{
-            $db = new mysqli('localhost', "arce", "123456", "galorDB");
+            $db = new mysqli('localhost', "ahmed", "123456", "galorDB");
 
             if($db->connect_errno){
 
@@ -113,7 +113,7 @@
 
         //Comprobamos que la conexión se realice con éxito
         try{
-            $db = new mysqli('localhost', "arce", "123456", "galorDB");
+            $db = new mysqli('localhost', "ahmed", "123456", "galorDB");
 
             if($db->connect_errno){
 
@@ -142,7 +142,7 @@
 
         //Comprobamos que la conexión se realice con éxito
         try{
-            $db = new mysqli('localhost', "arce", "123456", "galorDB");
+            $db = new mysqli('localhost', "ahmed", "123456", "galorDB");
 
             if($db->connect_errno){
 
@@ -182,7 +182,7 @@
 
         //Comprobamos que la conexión se realice con éxito
         try{
-            $db = new mysqli('localhost', "arce", "123456", "galorDB");
+            $db = new mysqli('localhost', "ahmed", "123456", "galorDB");
 
             if($db->connect_errno){
 

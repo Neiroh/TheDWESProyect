@@ -45,7 +45,6 @@
 
             <!--Posicionar arriba a la derecha para cuando se pulse el botón-->
             <!--Lo de aparecer o desaparecer va con js-->
-            <form action="./registrar.php" method="post">
 
                 <p>
                     <label for="correoRegistro">Correo electrónico: </label><br>
@@ -64,11 +63,7 @@
                 <p>
                     <input type="submit" name="completarRegistro" value="Registrate" class="completaRegistro" id="botonRegistro">
                 </p>
-                <p id="error">
-                    Faltan Datos
-                </p>
-
-            </form>
+                <p id="error"></p>
 
         </div>
 
@@ -118,6 +113,9 @@
     </footer>
     <script src="./js/index.js"></script>
     <script src="./js/ajax.js"></script>
+    <script src="./js/enter.js"></script>
+    <script src="./js/registerAjax.js"></script>
+
 </body>
 
 </html>
