@@ -98,7 +98,6 @@
         <div class="capaOscura">
 
             <div class="contenedorImagenes" id="contenedorImagenes">
-                Holi
             </div>
             <button id="prev" class="prev" onclick=" ++page; show(document.getElementById('inputBusqueda').value, page); console.log(page)">Cargar más</button>
         </div>
