@@ -6,7 +6,7 @@
         //563492ad6f917000010000019b983f3b62fe43daa92e746d4553dd35
         //563492ad6f91700001000001f32ac10db82a4b458304946fa28bd05a
         $key = '563492ad6f917000010000019b983f3b62fe43daa92e746d4553dd35';
-        $link =  "https://api.pexels.com/v1/search?query=".$query."&page=".$page."&per_page=30"; 
+        $link =  "https://api.pexels.com/v1/search?query=".$query."&page=".$page; 
 
         $headers = array(
             'Authorization: ' . $key
