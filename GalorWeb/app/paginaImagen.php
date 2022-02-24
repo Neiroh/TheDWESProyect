@@ -7,7 +7,7 @@
     *
     *@return una matriz que contiene los comentarios y las imágenes de los usuarios que los han escrito
     */
-    function recibeInfoImagen($img){
+    function generaComentario($img){
 
         //Variable auxiliar para rellenar las posiciones que vamos creando del array
         $cont = 0;
