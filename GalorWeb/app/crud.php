@@ -15,7 +15,7 @@
 
         //Intentamos iniciar la conexión en la base de datos
         try{
-            $db = new mysqli('localhost', 'galorDB', 'arce', '123456');
+            $db = new mysqli('localhost', "arce", "123456", "galorDB");
 
             if($db->connect_errno){
 
@@ -36,7 +36,9 @@
         try{
             $db->query("INSERT INTO user('nombreUser', 'passwd', 'correoUser') VALUES ($nombre, $correo, $passwd)");
 
-            if($db->query("SELECT nombreUser FROM user WHERE correoUser = '$correo'")){
+            $consulta = $db->query("SELECT nombreUser FROM user WHERE correoUser = '$correo'");
+
+            if($res = $consulta->fetch_object()){
 
                 //Si da error de que ya existe el usuario lanzamos una excepción
                 throw new Exception("Ese usuario ya existe");
@@ -66,7 +68,7 @@
     function iniciarSesion($correo, $passwd){
 
         try{
-            $db = new mysqli('localhost', 'galorDB', 'arce', '123456');
+            $db = new mysqli('localhost', "arce", "123456", "galorDB");
 
             if($db->connect_errno){
 
@@ -109,7 +111,7 @@
 
         //Comprobamos que la conexión se realice con éxito
         try{
-            $db = new mysqli('localhost', 'galorDB', 'arce', '123456');
+            $db = new mysqli('localhost', "arce", "123456", "galorDB");
 
             if($db->connect_errno){
 
@@ -138,7 +140,7 @@
 
         //Comprobamos que la conexión se realice con éxito
         try{
-            $db = new mysqli('localhost', 'galorDB', 'arce', '123456');
+            $db = new mysqli('localhost', "arce", "123456", "galorDB");
 
             if($db->connect_errno){
 
@@ -178,7 +180,7 @@
 
         //Comprobamos que la conexión se realice con éxito
         try{
-            $db = new mysqli('localhost', 'galorDB', 'arce', '123456');
+            $db = new mysqli('localhost', "arce", "123456", "galorDB");
 
             if($db->connect_errno){
 

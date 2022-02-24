@@ -10,7 +10,7 @@
 
         //Comprobamos que la conexión se realice con éxito
         try{
-            $db = new mysqli('localhost', 'galorDB', 'arce', '123456');
+            $db = new mysqli('localhost', "arce", "123456", "galorDB");
 
             if($db->connect_errno){
 
@@ -37,7 +37,7 @@
     function fotoPerfil($correo, $image){
 
         try{
-            $db = new mysqli('localhost', 'galorDB', 'arce', '123456');
+            $db = new mysqli('localhost', "arce", "123456", "galorDB");
 
             if($db->connect_errno){
 
