@@ -1,7 +1,3 @@
-<?php  
-    error_reporting(E_ALL);
-    ini_set('display_errors', '1');
-?>
 <!DOCTYPE html>
 <html>
 
@@ -99,18 +95,24 @@
 
         </div>
 
-        <input type="text" class="inputBusqueda" id="inputBusqueda" placeholder="Inserta el nombre de las fotos que quieras buscar">
-        <input type="submit" name="enviaBusqueda" id="enviaBusqueda" class="enviaBusqueda boton" onclick="show(document.getElementById('inputBusqueda').value, page)">
+        <div class="search">
+            <input type="text" class="inputBusqueda" id="inputBusqueda" placeholder="Buscador...">
+            <input type="submit" name="enviaBusqueda" id="enviaBusqueda" class="enviaBusqueda boton" value=">" onclick="show(document.getElementById('inputBusqueda').value, page)">
+        </div>
 
         <div class="capaOscura">
 
             <div class="contenedorImagenes" id="contenedorImagenes">
+                Holi
             </div>
+            <button id="prev" class="prev" onclick=" ++page; show(document.getElementById('inputBusqueda').value, page); console.log(page)">Cargar más</button>
         </div>
 
-        <button id="prev" class="prev" onclick=" ++page; show(document.getElementById('inputBusqueda').value, page); console.log(page)">Cargar más</button>
+        
 
     </main>
+
+    <hr>
     <footer>
         <h3>2º Desarrollo de Aplicaciones Web en Entorno Servidor</h3>
     </footer>
