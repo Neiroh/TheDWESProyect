@@ -108,6 +108,7 @@ main {
     top: -20px;
     height: 530px;
     display: none;
+    z-index: 2;
 }
 
 
@@ -334,8 +335,9 @@ footer {
     position: fixed;
     bottom: 0;
 }
-footer hr{
+
+footer hr {
     width: 100%;
-    position:fixed;
+    position: fixed;
     bottom: 40px;
 }
