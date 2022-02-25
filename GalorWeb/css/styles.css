@@ -213,6 +213,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 30px;
 }
 
 
@@ -327,4 +328,9 @@ footer {
     align-items: center;
     position: fixed;
     bottom: 0;
+}
+footer hr{
+    width: 100%;
+    position:fixed;
+    bottom: 40px;
 }

@@ -104,8 +104,8 @@
 
     </main>
 
-    <hr>
     <footer>
+    <hr>
         <h3>2º Desarrollo de Aplicaciones Web en Entorno Servidor</h3>
     </footer>
     <script src="./js/index.js"></script>
