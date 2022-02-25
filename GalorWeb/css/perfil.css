@@ -39,10 +39,8 @@ hr{
 }
 /*Usuario y foto de perfil cuando se inicia sesión*/
 .perfil{
-
-
-    display: none;
-    
+    background-color: #10A3EB;
+    margin-right: 30px;
 }
 /*Botones de registrarse y iniciar sesión*/
 .sesion{
@@ -50,195 +48,87 @@ hr{
     flex-flow: row;
     margin-right: 40px;
 }
-/*Propiedades de los propios botones*/
-.registro,.inicioSesion{
-    background-color: black;
-    color: #EEEEEE;
-    font-size: 1.4em;
-    width: 180px;
-    height: 50px;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 20px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 3px 5px 5px #10A3EB;
-    cursor: pointer;
-}
 img{
     width: 100%;
-}
-main{
-    position: relative;
-}
-/*Capa de registro*/
-.Registro{
-    position: absolute;
-    font-family: 'Comfortaa', cursive;
-    background-color: #EEEEEE;
-    text-shadow: 1px 2px 2px #10A3EB;
-    box-shadow: 3px 4px 6px black;
-    border-radius: 10px;
-    padding: 30px;
-    font-size: 2em;
-    right: 10%;
-    top: -20px;
-    height: 530px;
-
-
-    display: none;
-
-}
-/*Texto y label de registro*/
-.Registro input{
-    font-family: 'Raleway', sans-serif;
-    height: 40px;
-    margin: 10px;
-    margin-right: 30px;
-    padding-left: 10px;
-    margin-bottom: 30px;
-    font-size: 0.8em;
-}
-/*Botón de registro final*/
-.Registro .completaRegistro {
-    background-color: black;
-    color: #EEEEEE;
-    font-size: 1.1em;
-    width: 200px;
-    height: 80px;
-    padding: 10px;
-    margin: 10px;
-    margin-left: 95px;
-    margin-top: 10px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 3px 5px 5px #10A3EB;
-    cursor: pointer;
-    font-weight: bold;
-}
-/*Error de falta datos*/
-.Registro p:last-child{
-    margin-left: 92px;
-    color: red;
-}
-/*Capa de login (como la de registro)*/
-.login{
-    position: absolute;
-    font-family: 'Comfortaa', cursive;
-    background-color: #EEEEEE;
-    text-shadow: 1px 2px 2px #10A3EB;
-    box-shadow: 3px 4px 6px black;
-    border-radius: 10px;
-    padding: 30px;
-    font-size: 2em;
-    right: 2%;
-    top: -20px;
-    height: 390px;
-
-
-    display: none;
-    
-}
-/*Texto y label de login*/
-.login input{
-    font-family: 'Raleway', sans-serif;
-    height: 40px;
-    margin: 10px;
-    margin-right: 30px;
-    padding-left: 10px;
-    margin-bottom: 30px;
-    font-size: 0.8em;
-}
-/*Botón de login final*/
-.login .completaLogin{
-    background-color: black;
-    color: #EEEEEE;
-    font-size: 1.1em;
-    width: 250px;
-    height: 80px;
-    padding: 10px;
-    margin: 10px;
-    margin-left: 70px;
-    margin-top: 5px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 3px 5px 5px #10A3EB;
-    cursor: pointer;
-    font-weight: bold;
 }
 /******** Fin de encabezado *********/
 
 /********* Cuerpo ***********/
+body{
+    height: 96%;
+}
+html{
+    height: 96%;
+}
 main{
+    position: relative;
     background-color: #EEEEEE;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 96%;
 }
-/*Tamaño del buscador*/
-.inputBusqueda{
-    width: 30%;
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 40%;
+    height: 96%;
+    margin-top: 50px;
 }
-/*Disposicion*/
-.search{
+.usuario{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    margin: 30px;
+    font-family: 'Comfortaa', cursive;
+    font-size: 1.8em;
+    margin-top: 20px;
 }
-/*Input Buscador...*/
-.search input{
-    font-family: 'Raleway', sans-serif;
-    height: 30px;
-    font-size: 1.2em;
-    border-radius: 5px;
-    padding: 5px;
+.cambiarNombre{
+    width: 100%;
 }
-/*Botón del buscador*/
-.search input:last-child{
-    font-family: 'Raleway', sans-serif;
-    width: 30px;
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #EEEEEE;
-    background-color: black;
-    padding: 0;
-    position: absolute;
-    right: 35.4%;
-    top:28.5px;
+.cambiaFoto{
+    background-color: white;
+    box-shadow: 0 2px 2px #10A3EB;
+    text-align: center;
+    font-size: 0.8em;
+    width: 160px;
+    padding:10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
-/*Donde las imagenes*/
-.contenedorImagenes{
-    background-color: #EEEEEE;
-    height: 100%;
-}
-/*Capa por encima que sera transparente*/
-.capaOscura{
-    background-color: #EEEEEE;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-/*Boton de Cargar más*/
-.capaOscura button{
-    font-family: 'Raleway', sans-serif;
-    margin: 20px;
-    width: 20%;
-    height: 30px;
-    font-size: 1.5em;
-    border-radius: 5px;
-    padding: 5px;
-    background-color: black;
-    color: #EEEEEE;
+.correo{
+    font-family: 'Comfortaa', cursive;
     border-radius: 10px;
-    height: 50px;
+    font-size: 1.5em;
+    margin-top: 30px;
+}
+.correo h3{
+    background-color: white;
+    box-shadow: 0 2px 2px #10A3EB;
+    text-align: center;
+    width: 160px;
+    padding:10px;
+    margin-bottom: 10px;
+}
+.inputCorreo{
+    width: 100%;
+    height: 30px;
+    font-size: 0.5em;
+    margin-bottom: 30px;
+    padding-left: 5px;
+}
+.guardar{
+    background-color: black;
+    color: #EEEEEE;
+    font-size: 1.5em;
+    width: 260px;
+    height: 60px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Comfortaa', cursive;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-self: flex-end;
 }
 /********* Fin del Cuerpo ***********/
 
@@ -254,4 +144,9 @@ footer{
     align-items: center;
     position:fixed;
     bottom: 0;
+}
+footer hr {
+    width: 100%;
+    position: fixed;
+    bottom: 40px;
 }
