@@ -71,7 +71,7 @@
         <!--Lo de aparecer o desaparecer va con js-->
         <div class="login" id="divL">
 
-
+            <form>
                 <p>
                     <label for="correoSesion">Correo electrónico: </label><br>
                     <input type="text" name="correoSesion" placeholder="micorreo@correo.com" class="inserta inicioS">
@@ -84,7 +84,7 @@
                 <p>
                     <input type="submit" name="completarLogin" value="Iniciar Sesión" class="completaLogin" id="botonLogin">
                 </p>
-
+            </form>
 
         </div>
 
