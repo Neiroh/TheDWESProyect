@@ -6,3 +6,5 @@ let reg = document.getElementById('openDR');
 let log = document.getElementById('openDL');
 let divR = document.getElementById('divReg');
 let divL = document.getElementById('divL');
+let perfil = document.getElementById("perfil");
+let divPerf = document.getElementById("divPerf");

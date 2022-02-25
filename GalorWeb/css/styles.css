@@ -51,7 +51,7 @@ hr {
 /*Usuario y foto de perfil cuando se inicia sesión*/
 
 .perfil {
-    display: block;
+    display: none;
     margin-right: 15px;
 }
 
@@ -63,7 +63,7 @@ hr {
 /*Botones de registrarse y iniciar sesión*/
 
 .sesion {
-    display: none;
+    display: flex;
     flex-flow: row;
     margin-right: 40px;
 }
