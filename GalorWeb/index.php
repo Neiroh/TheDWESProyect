@@ -33,15 +33,15 @@
 
         <div class="sesion">
 
-            <div class="boton registro">Regístrate</div>
-            <div class="boton inicioSesion">Iniciar Sesión</div>
+            <div class="boton registro" id="openDR">Regístrate</div>
+            <div class="boton inicioSesion" id="openDL">Iniciar Sesión</div>
 
         </div>
     </header>
     <hr>
     <main>
 
-        <div class="Registro">
+        <div class="Registro" id="divReg">
 
             <!--Posicionar arriba a la derecha para cuando se pulse el botón-->
             <!--Lo de aparecer o desaparecer va con js-->
@@ -69,9 +69,8 @@
 
         <!--Posicionar arriba a la derecha para cuando se pulse el botón-->
         <!--Lo de aparecer o desaparecer va con js-->
-        <div class="login">
+        <div class="login" id="divL">
 
-            <form action="./inicioSesion.php" method="post">
 
                 <p>
                     <label for="correoSesion">Correo electrónico: </label><br>
@@ -86,7 +85,6 @@
                     <input type="submit" name="completarLogin" value="Iniciar Sesión" class="completaLogin" id="botonLogin">
                 </p>
 
-            </form>
 
         </div>
 
@@ -114,6 +112,8 @@
     <script src="./js/ajax.js"></script>
     <script src="./js/enter.js"></script>
     <script src="./js/registerAjax.js"></script>
+    <script src="./js/openDivs.js"></script>
+
 
 </body>
 
