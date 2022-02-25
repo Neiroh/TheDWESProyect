@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="html">
 
 <head>
     <meta charset="UTF-8">
@@ -97,19 +97,20 @@
 
         </div>
 
+        <div class="relleno" id="relleno">
+        </div>
+
         <div class="search">
             <input type="text" class="inputBusqueda" id="inputBusqueda" placeholder="Buscador...">
             <input type="submit" name="enviaBusqueda" id="enviaBusqueda" class="enviaBusqueda boton" value=">" onclick="clearImg(); show(document.getElementById('inputBusqueda').value, page);">
         </div>
 
-        <div class="capaOscura">
 
+        <div class="capaGrande">
             <div class="contenedorImagenes" id="contenedorImagenes">
             </div>
             <button id="prev" class="prev" onclick=" ++page; show(document.getElementById('inputBusqueda').value, page); console.log(page)">Cargar más</button>
         </div>
-
-        
 
     </main>
 

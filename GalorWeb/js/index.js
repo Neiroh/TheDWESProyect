@@ -8,3 +8,5 @@ let divR = document.getElementById('divReg');
 let divL = document.getElementById('divL');
 let perfil = document.getElementById("perfil");
 let divPerf = document.getElementById("divPerf");
+var capaOscura = document.getElementById("relleno");
+var html = document.getElementById("html");

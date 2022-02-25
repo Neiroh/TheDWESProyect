@@ -93,10 +93,6 @@ img {
     width: 100%;
 }
 
-main {
-    position: relative;
-}
-
 
 /*Capa de registro*/
 
@@ -113,7 +109,7 @@ main {
     top: -20px;
     height: 530px;
     display: none;
-    z-index: 2;
+    z-index: 5;
 }
 
 
@@ -173,6 +169,7 @@ main {
     top: -20px;
     height: 390px;
     display: none;
+    z-index: 5;
 }
 
 .edit {
@@ -256,6 +253,7 @@ main {
 /********* Cuerpo ***********/
 
 main {
+    position: relative;
     background-color: #EEEEEE;
     display: flex;
     flex-direction: column;
@@ -334,7 +332,7 @@ main {
 
 /*Capa por encima que sera transparente*/
 
-.capaOscura {
+.capaGrande {
     background-color: #EEEEEE;
     display: flex;
     flex-direction: column;
@@ -345,7 +343,7 @@ main {
 
 /*Boton de Cargar más*/
 
-.capaOscura button {
+.capaGrande button {
     font-family: 'Raleway', sans-serif;
     margin: 20px;
     width: 20%;
@@ -361,6 +359,18 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+
+.relleno {
+    background-color: black;
+    position: relative;
+    top: 0;
+    opacity: 50%;
+    height: 80vh;
+    width: 100%;
+    display: none;
+    z-index: 3;
 }
 
 
