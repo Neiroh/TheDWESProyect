@@ -1,6 +1,6 @@
 <?php
 
-    include "./crud.php";
+    include "crud.php";
 
     /*Función para iniciar una sesión
     *
@@ -10,6 +10,7 @@
     *@return $_SESSION['correo'] devuelve el correo en forma de sesión para mantenerla iniciada
     */
     function abreSesion($correo, $passwd){
+
 
         $_SESSION['correo'] = "";
         $_SESSION['passwd'] = "";
@@ -80,7 +81,7 @@
         }
     }
 
-    function muestraBotones(){
+    function muestraHeader(){
 
         //Iniciamos la sesión para quitarnos de errores
         if(session_id() == ""){
@@ -89,7 +90,20 @@
 
         if(!isset($_SESSION['correo'])){
 
-            echo '';
+            echo '<div class="sesion">
+
+            <div class="boton registro" id="openDR">Regístrate</div>
+            <div class="boton inicioSesion" id="openDL">Iniciar Sesión</div>
+
+        </div>';
+
+        }else{
+
+            echo '<div class="perfil">
+            <h3>Nombre Perfil</h3>
+            <input type="button" name="perfil" id="perfil" value="V">
+            <img src="" alt="foto_perfil" class="fotoPerfilTop">
+        </div>';
 
         }
 

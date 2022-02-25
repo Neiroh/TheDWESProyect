@@ -25,18 +25,14 @@
             <h1>Galor</h1>
         </div>
 
-        <div class="perfil">
-            <h3>Nombre Perfil</h3>
-            <input type="button" name="perfil" id="perfil" value="V">
-            <img src="" alt="foto_perfil" class="fotoPerfilTop">
-        </div>
+        <?php 
+        
+            include './app/sesiones.php';
 
-        <div class="sesion">
+            muestraHeader();
+        
+        ?>
 
-            <div class="boton registro" id="openDR">Regístrate</div>
-            <div class="boton inicioSesion" id="openDL">Iniciar Sesión</div>
-
-        </div>
     </header>
     <hr>
     <main>
