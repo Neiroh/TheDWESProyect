@@ -80,4 +80,19 @@
         }
     }
 
+    function muestraBotones(){
+
+        //Iniciamos la sesión para quitarnos de errores
+        if(session_id() == ""){
+            session_start();
+        }
+
+        if(!isset($_SESSION['correo'])){
+
+            echo '';
+
+        }
+
+    }
+
 ?>

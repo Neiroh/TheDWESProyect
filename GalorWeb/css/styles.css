@@ -51,14 +51,19 @@ hr {
 /*Usuario y foto de perfil cuando se inicia sesión*/
 
 .perfil {
-    display: none;
+    display: block;
+    margin-right: 15px;
+}
+
+.perfil input[type="button"] {
+    width: 15%;
 }
 
 
 /*Botones de registrarse y iniciar sesión*/
 
 .sesion {
-    display: flex;
+    display: none;
     flex-flow: row;
     margin-right: 40px;
 }
