@@ -38,47 +38,57 @@
 
     ?>
 
-    <header>
+<header>
 
-        <div class="logo">
-            <img src="" alt="logo">
-            <h1>Galor</h1>
-        </div>
+    <div class="logo">
+        <img src="images/camara.png" alt="logo">
+        <h1>Galor</h1>
+    </div>
 
-        <div class="perfil">
-            <h3>Nombre Perfil</h3>
-            <input type="button" name="perfil" id="perfil" value="V">
-            <img src="data:image/png;base64, <?php base64_encode($dato["foto"]);?>" alt="foto_perfil" class="fotoPerfilTop">
-        </div>
+    <div class="perfil">
+        <h3>Nombre Perfil</h3>
+        <input type="button" name="perfil" id="perfil" value="V">
+        <img src="" alt="foto_perfil" class="fotoPerfilTop">
+    </div>
 
-    </header>
+</header>
+<hr>
 
     <main>
-        <form action="#" method="post">
+        <div class="contenedor">
+            <div class="usuario">
+                <div class="foto">
+                    <form action="#" method="post">
 
-            <img src="data:image/png;base64, <?php base64_encode($dato["foto"]);?>" alt="foto_perfil">
-            <input type="file" value="Cambiar foto" class="botonCambio" name="fotoPerfil">
+                        <img src="data:image/png;base64, <?php base64_encode($dato["foto"]);?>" alt="foto_perfil"><br>
+                        <input type="file" value="Cambiar foto" class="botonCambio" name="fotoPerfil"><br>
 
-            <input type="submit" value="Cambiar foto" name="cambiaFoto" class="boton cambiaFoto">
+                        <input type="submit" value="Cambiar foto" name="cambiaFoto" class="boton cambiaFoto">
 
-        </form>
+                    </form>
+                </div>
 
-        <form action="#" method="post">
+                <form action="#" method="post">
 
-            <h2><?php //$datos["nombre"]; ?></h2>
-            <input id="usuario" type="text" value=" > Cambiar nombre de usuario" class="botonCambio" name="usuario" onclick="cambiaUsuario()" readonly>
+                    <h2>ARCE69<?php //$datos["nombre"]; ?></h2>
+                    <input id="usuario" type="text" value=" > Cambiar nombre de usuario" class="cambiarNombre" name="usuario" onclick="cambiaUsuario()" readonly>
 
-            <div class="lineaSeparadora"></div>
+            </div>
+            <div class="correo">
+                <h3>Correo</h3>
+                <input type="text" name="correo" id="correo" class="input inputCorreo" placeholder="Arcexulito@gmail.com" value="<?php //$datos["correo"]; ?>" onclick="cambiaCorreo()" readonly>
+            </div>
 
-            <h3>Correo</h3>
-            <input type="text" name="correo" id="correo" class="input inputCorreo" value="<?php //$datos["correo"]; ?>" onclick="cambiaCorreo()" readonly>
-
-            <input type="submit" value="Guardar cambios" class="boton guardar" name="guardar" onclick="vuelveNormal()">
-
-        </form>
+                <input type="submit" value="Guardar cambios" class="boton guardar" name="guardar" onclick="vuelveNormal()">
+            
+            </form>
+        </div>
 
     </main>
-
+    <footer>
+    <hr>
+        <h3>2º Desarrollo de Aplicaciones Web en Entorno Servidor</h3>
+    </footer>
     <script src="./js/cambiaDatos.js"></script>
 </body>
 
