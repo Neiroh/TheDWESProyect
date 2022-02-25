@@ -40,10 +40,10 @@ CREATE TABLE IF NOT EXISTS coment(
 );
 
 CREATE USER 'arce'@'localhost' IDENTIFIED BY '123456';
-GRANT ALL ON galor.* TO 'arce'@'localhost';
+GRANT ALL ON galorDB.* TO 'arce'@'localhost';
 
 CREATE USER 'ahmed'@'localhost' IDENTIFIED BY '123456';
-GRANT ALL ON galor.* TO 'ahmed'@'localhost';
+GRANT ALL ON galorDB.* TO 'ahmed'@'localhost';
 
 CREATE USER 'jesusro'@'localhost' IDENTIFIED BY '123456';
-GRANT ALL ON galor.* TO 'jesusro'@'localhost';
+GRANT ALL ON galorDB.* TO 'jesusro'@'localhost';
