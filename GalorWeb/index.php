@@ -90,7 +90,7 @@
 
         <div class="search">
             <input type="text" class="inputBusqueda" id="inputBusqueda" placeholder="Buscador...">
-            <input type="submit" name="enviaBusqueda" id="enviaBusqueda" class="enviaBusqueda boton" value=">" onclick="show(document.getElementById('inputBusqueda').value, page)">
+            <input type="submit" name="enviaBusqueda" id="enviaBusqueda" class="enviaBusqueda boton" value=">" onclick="clearImg(); show(document.getElementById('inputBusqueda').value, page);">
         </div>
 
         <div class="capaOscura">
@@ -113,6 +113,8 @@
     <script src="./js/enter.js"></script>
     <script src="./js/registerAjax.js"></script>
     <script src="./js/openDivs.js"></script>
+    <script src="./js/clear.js"></script>
+
 
 
 </body>
