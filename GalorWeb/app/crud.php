@@ -25,7 +25,7 @@
             }
         }catch(Exception $ex){
             //Otro tipo de error
-            echo "Excepción $ex <br>";
+            echo $ex->getMessage(), "<br>";
 
         }
         
@@ -39,7 +39,7 @@
             if($consulta->fetch_object()){
 
                 //Si da error de que ya existe el usuario lanzamos una excepción
-                throw new Exception("Ese usuario ya existe");
+                throw new Exception("Ese usuario ya existe.", 2);
 
             }else{
 
@@ -50,7 +50,7 @@
         }catch(Exception $ex){
 
             //Si no, lanzamos otra
-            echo "Excepción ", $ex, "<br>";
+            echo $ex->getMessage(), "<br>";
 
         }
 
@@ -79,7 +79,7 @@
             }
         }catch(Exception $ex){
 
-            echo "Excepción $ex <br>";
+            echo $ex->getMessage(), "<br>";
 
         }
 
@@ -122,7 +122,7 @@
             }
         }catch(Exception $ex){
 
-            echo "Excepción $ex <br>";
+            echo $ex->getMessage(), "<br>";
 
         }
 
@@ -151,7 +151,7 @@
             }
         }catch(Exception $ex){
 
-            echo "Excepción $ex <br>";
+            echo $ex->getMessage(), "<br>";
 
         }
 
@@ -191,7 +191,7 @@
             }
         }catch(Exception $ex){
 
-            echo "Excepción $ex <br>";
+            echo $ex->getMessage(), "<br>";
 
         }
 
