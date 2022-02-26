@@ -1,6 +1,7 @@
 var page = 1;
 
-var paR = document.getElementById('error');
+var paR = document.getElementById('errorR');
+var paL = document.getElementById('errorL');
 var butR = document.getElementById('botonRegistro');
 let reg = document.getElementById('openDR');
 let log = document.getElementById('openDL');

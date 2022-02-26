@@ -18,15 +18,28 @@
 </head>
 
 <body>
+    
     <header>
 
         <div class="logo">
             <img src="images/camara.png" alt="logo">
             <h1>Galor</h1>
         </div>
+        <p id="errorL"></p>
+
+        <?php
+            require_once('app/crud.php');
+
+            if (isset($_POST['completarLogin'])) {
+                if (isset($_POST['correoSesion']) && isset($_POST['passSesion'])) {
+                echo '<script>console.log(123);</script>';
+                }
+
+                iniciarSesion($_POST['correoSesion'], $_POST['passSesion']);
+            }
+        ?>
 
         <div class="sesion">
-
             <div class="boton registro" id="openDR">Regístrate</div>
             <div class="boton inicioSesion" id="openDL">Iniciar Sesión</div>
 
@@ -44,7 +57,7 @@
 
         <div class="edit" id="divPerf">
 
-            <div class="miPerfil"> > Mi Perfil</div>
+            <div class="miPerfil">Mi Perfil</div>
             <hr>
             <div class="cerrar">Cerrar Sesión</div>
 
@@ -72,7 +85,7 @@
                 <p>
                     <input type="submit" name="completarRegistro" value="Registrate" class="completaRegistro" id="botonRegistro">
                 </p>
-                <p id="error"></p>
+                <p id="errorR"></p>
 
         </div>
 
@@ -80,20 +93,23 @@
         <!--Lo de aparecer o desaparecer va con js-->
         <div class="login" id="divL">
 
-            <form>
+            <form action="#" method="POST">
                 <p>
                     <label for="correoSesion">Correo electrónico: </label><br>
-                    <input type="text" name="correoSesion" placeholder="micorreo@correo.com" class="inserta inicioS">
+                    <input type="text" name="correoSesion" placeholder="micorreo@correo.com" class="inserta inicioS" id="emailLog">
                 </p>
 
                 <p>
-                    <label for="passRegistro">Contraseña: </label><br>
-                    <input type="password" name="passRegistro" placeholder="micorreo@correo.com" class="inserta inicioS">
+                    <label for="passSesion">Contraseña: </label><br>
+                    <input type="password" name="passSesion" placeholder="password" class="inserta inicioS" id="passLog">
                 </p>
                 <p>
-                    <input type="submit" name="completarLogin" value="Iniciar Sesión" class="completaLogin" id="botonLogin">
+                    <input type="submit" name="completarLogin" value="IniciarSesion" class="completaLogin" id="botonLogin" >
                 </p>
+
+
             </form>
+
 
         </div>
 
@@ -118,6 +134,8 @@
     <hr>
         <h3>2º Desarrollo de Aplicaciones Web en Entorno Servidor</h3>
     </footer>
+
+    
     <script src="./js/index.js"></script>
     <script src="./js/ajax.js"></script>
     <script src="./js/enter.js"></script>

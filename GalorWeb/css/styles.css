@@ -251,14 +251,21 @@ img {
 
 
 /********* Cuerpo ***********/
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+}
 
 main {
     position: relative;
     background-color: #EEEEEE;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     padding-bottom: 60px;
+    height: 100%;
 }
 
 /*Tamaño del buscador*/
@@ -299,9 +306,6 @@ main {
     color: #EEEEEE;
     background-color: black;
     padding: 0;
-    position: absolute;
-    right: 35.4%;
-    top: 28.5px;
 }
 
 
@@ -366,10 +370,11 @@ main {
     position: relative;
     top: 0;
     opacity: 50%;
-    height: 80vh;
+    height: 100%;
     width: 100%;
     display: none;
     z-index: 3;
+    position: absolute;
 }
 
 

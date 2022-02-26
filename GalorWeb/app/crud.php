@@ -68,7 +68,7 @@
     *@return un boolean para saber si el inicio se ha realizado con éxito
     */
     function iniciarSesion($correo, $passwd){
-
+        
         try{
             $db = new mysqli('localhost', "ahmed", "123456", "galorDB");
 
@@ -84,19 +84,31 @@
         }
 
         //Realizamos la consulta para comprobar que la contraseña sea la misma
-        $consulta = $db->query("SELECT correoUser, passwd FROM user WHERE correoUser = '$correo'");
-        $recorreConsulta = $consulta->fetch_object();
+        $consulta = $db->query("SELECT correoUser, passwd FROM user WHERE correoUser = '$correo';");
 
-        //Comprobación
-        if($recorreConsulta->passwd === $passwd){
+        if($recorreConsulta = $consulta->fetch_object()){
+             //Comprobación
+            if($recorreConsulta->passwd == $passwd){
+                if (!isset($_SESSION['on'])) {
+                    session_start();
+                    $_SESSION['on']=true;
+                }
 
-            return true;
+                if (!isset($_SESSION['email'])&&!isset($_SESSION['pass'])) {
+                    $_SESSION['email']='';
+                    $_SESSION['pass']='';
+                }
 
-        }else{
-
-            return false;
-
+                $_SESSION['email']=$recorreConsulta->passwd;
+                $_SESSION['pass']=$recorreConsulta->correoUser;
+            }
         }
+
+        else{
+            echo '<script>document.getElementById("errorL").innerHTML="El correo no existe.";</script>';
+        }
+
+       
 
         //Cerramos la base de datos
         $db->close();
