@@ -19,31 +19,32 @@
 
     <?php
 
-        //$correoViejo = $_SESSION['correo'];
+        //$correoViejo = $_SESSION['email'];
 
         require_once('app/sesiones.php');
         //$datos = muestraDatosUsuario($correo);
 
-        /*if($_POST['guardar']){
+        if(isset($_POST['guardar'])){
 
-            editaUser($correoViejo, $_POST['ususario'], $_POST['correo']);
+            editaUser($correoViejo, $_POST['usuario'], $_POST['correo']);
 
         }
 
-        if($_POST['cambiaFoto']){
+        if(isset($_POST['cambiaFoto'])){
 
             fotoPerfil($correo, $_POST['cambiaFoto']);
 
-        }*/
+        }
     ?>
 
 <header>
 
-    <div class="logo">
-        <img src="images/camara.png" alt="logo">
-        <h1>Galor</h1>
-    </div>
-
+    <a href="./index.php">
+        <div class="logo">
+            <img src="images/camara.png" alt="logo">
+            <h1>Galor</h1>
+        </div>
+    </a>
     <div class='perfil' id="divPerfil">
         <h3 id="h3User"></h3>
         <input type='button' name='perfil' id='perfil' value='V'>
@@ -80,12 +81,12 @@
                 <form action="#" method="post">
 
                     <h2 id="h2Perf"></h2>
-                    <input id="usuario" type="text" value=" > Cambiar nombre de usuario" class="cambiarNombre" name="usuario" onclick="cambiaUsuario()" readonly>
+                    <input id="usuario" type="text" placeholder=" > Cambiar nombre de usuario" class="cambiarNombre" name="usuario" onclick="cambiaDato()" readonly>
 
             </div>
             <div class="correo">
                 <h3>Correo</h3>
-                <input type="text" name="correo" id="correo" class="input inputCorreo" onclick="cambiaCorreo()" readonly>
+                <input type="text" name="correo" id="correo" class="input inputCorreo" onclick="cambiaDato()" readonly>
             </div>
 
                 <input type="submit" value="Guardar cambios" class="boton guardar" name="guardar" onclick="vuelveNormal()">
