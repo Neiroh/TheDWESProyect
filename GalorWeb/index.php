@@ -18,7 +18,14 @@
 </head>
 
 <body>
-    
+    <?php
+        require_once('app/sesiones.php');
+
+
+        if (isset($_POST['closeSesion'])) {
+            cierraSesion();
+        }
+    ?>
     <header>
 
         <div class="logo">
@@ -27,9 +34,20 @@
         </div>
         <p id="errorL"></p>
 
+
+            <div class='sesion' id="divSesion">
+                <div class='boton registro' id='openDR'>Regístrate</div>
+                <div class='boton inicioSesion' id='openDL'>Iniciar Sesión</div>
+            </div>
+
+            <div class='perfil' id="divPerfil">
+                <h3 id="h3User"></h3>
+                <input type='button' name='perfil' id='perfil' value='V'>
+                <img alt='foto_perfil' class='fotoPerfilTop' id="imgUser">
+            </div>
+
+
         <?php
-            require_once('app/crud.php');
-            //require_once('app/sesiones.php');
 
             if (isset($_POST['completarLogin'])) {
                 if (isset($_POST['correoSesion']) && isset($_POST['passSesion'])) {
@@ -42,16 +60,20 @@
             creaHeader();
         ?>
 
+            
+
     </header>
     <hr>
     <main>
 
         <div class="edit" id="divPerf">
-
-            <div class="miPerfil">Mi Perfil</div>
+            <form method="POST" action="perfil.php">
+                <input type="submit" class="miPerfil" id="miPerf" value="Mi Perfil"></input>
+            </form>
             <hr>
-            <div class="cerrar">Cerrar Sesión</div>
-
+            <form method="POST" action="#">
+                <input name="closeSesion" type="submit" class="cerrar" id="cerSes" value="Cerrar Sesión"></input>
+            </form>
         </div>
 
         <div class="Registro" id="divReg">
@@ -126,12 +148,16 @@
     </footer>
 
     
-    <script src="./js/index.js"></script>
     <script src="./js/ajax.js"></script>
-    <script src="./js/enter.js"></script>
-    <script src="./js/registerAjax.js"></script>
-    <script src="./js/openDivs.js"></script>
+    <script src="./js/cambiaDatos.js"></script>
     <script src="./js/clear.js"></script>
+    <script src="./js/enter.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/loginAjax.js"></script>
+    <script src="./js/openDivs.js"></script>
+    <script src="./js/registerAjax.js"></script>
+
+
 
 
 

@@ -51,7 +51,7 @@ hr {
 /*Usuario y foto de perfil cuando se inicia sesión*/
 
 .perfil {
-    display: block;
+    display: none;
     margin-right: 15px;
 }
 
@@ -63,7 +63,7 @@ hr {
 /*Botones de registrarse y iniciar sesión*/
 
 .sesion {
-    display: flex;
+    display: none;
     flex-flow: row;
     margin-right: 40px;
 }
@@ -185,6 +185,7 @@ img {
     top: -20px;
     height: 200px;
     display: none;
+    z-index: 10;
 }
 
 .miPerfil {
@@ -351,6 +352,7 @@ main {
 .capaGrande button {
     font-family: 'Raleway', sans-serif;
     margin: 20px;
+    margin-bottom: 70px;
     width: 20%;
     height: 30px;
     font-size: 1.5em;

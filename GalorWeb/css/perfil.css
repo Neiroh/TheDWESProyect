@@ -54,6 +54,61 @@ img{
 /******** Fin de encabezado *********/
 
 /********* Cuerpo ***********/
+
+.edit {
+    position: absolute;
+    font-family: 'Comfortaa', cursive;
+    background-color: #EEEEEE;
+    text-shadow: 1px 2px 2px #10A3EB;
+    box-shadow: 3px 4px 6px black;
+    border-radius: 10px;
+    padding: 30px;
+    font-size: 2em;
+    right: 2%;
+    top: -20px;
+    height: 200px;
+    display: none;
+    z-index: 10;
+}
+
+.miPerfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    box-shadow: 1px 2px 2px #10A3EB;
+    margin-bottom: 15px;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cerrar {
+    background-color: black;
+    color: #EEEEEE;
+    font-size: 1em;
+    width: 250px;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 3px 5px 5px #10A3EB;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.relleno {
+    background-color: black;
+    position: relative;
+    top: 0;
+    opacity: 50%;
+    height: 100%;
+    width: 100%;
+    display: none;
+    z-index: 3;
+    position: absolute;
+}
+
 body{
     height: 96%;
 }
