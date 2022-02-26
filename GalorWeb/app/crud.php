@@ -173,12 +173,14 @@
 
         //Seleccionamos los valores desde la base de datos para mostrarlos en la página
         $datos = $db->query("SELECT nombreUser, fotoPerfil FROM user WHERE correoUser = '$correo'");
-
-        if($datos->fetch_object()){
+        
+        if($res = $datos->fetch_object()){
+            
             //Almacenamos todos los valores en un array asociativo para devolverlos a la página desde la que se llama a la función para mostrar los datos
-            //Usar <img width='100' src='data:image/png;base64, ".base64_encode($res->fotoPerfil)."'></img> para visualizar la imagen
+            //Usar <img width='100' src='data:image/png;base64, ".base64_encode($res->fotoPerfil)."'></img> para visualizar la imagen+
+
             $muestra = array(
-                "nombre" => $datos->nombreUser,
+                "nombre" => $res->nombreUser,
                 "correo" => $correo
             );
 
@@ -189,8 +191,6 @@
                 $muestra['foto']='';
             }
 
-
-            print_r($muestra);
             return $muestra;
         }
     }
@@ -233,24 +233,17 @@
 
         if(!isset($_SESSION['email'])){
 
-            echo "
-            <div class='sesion'>
-                <div class='boton registro' id='openDR'>Regístrate</div>
-                <div class='boton inicioSesion' id='openDL'>Iniciar Sesión</div>
-            </div>
-            ";
+            echo"<script>document.getElementById('divSesion').style.display='flex'; </script>";
+
         }else{
 
             $datos = muestraDatosUsuario($_SESSION['email']);
 
-            echo "
-            <div class='perfil'>
-                <h3>", $datos['nombre'] ,"</h3>
-                <input type='button' name='perfil' id='perfil' value='V'>
-                <img src='",$datos['foto']," alt='foto_perfil' class='fotoPerfilTop'>
-            </div>
-            ";
+            $foto = $datos['foto'];
 
+            echo "<script>console.log(".$foto."); document.getElementById('divPerfil').style.display='block'; document.getElementById('imgUser').setAttribute('src','data:image/png;base64,".base64_encode($foto)."'); document.getElementById('h3User').innerHTML ='".$datos['nombre']."'</script>";
+
+            
         }
 
     }

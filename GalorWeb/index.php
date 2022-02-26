@@ -18,7 +18,11 @@
 </head>
 
 <body>
-    
+    <?php
+        require_once('app/crud.php');
+
+        
+    ?>
     <header>
 
         <div class="logo">
@@ -27,9 +31,20 @@
         </div>
         <p id="errorL"></p>
 
+
+            <div class='sesion' id="divSesion">
+                <div class='boton registro' id='openDR'>Regístrate</div>
+                <div class='boton inicioSesion' id='openDL'>Iniciar Sesión</div>
+            </div>
+
+            <div class='perfil' id="divPerfil">
+                <h3 id="h3User"></h3>
+                <input type='button' name='perfil' id='perfil' value='V'>
+                <img alt='foto_perfil' class='fotoPerfilTop' id="imgUser">
+            </div>
+
+
         <?php
-            require_once('app/crud.php');
-            //require_once('app/sesiones.php');
 
             if (isset($_POST['completarLogin'])) {
                 if (isset($_POST['correoSesion']) && isset($_POST['passSesion'])) {
@@ -39,8 +54,12 @@
                 iniciarSesion($_POST['correoSesion'], $_POST['passSesion']);
             }
 
-            creaHeader();
+            $datos = creaHeader();
+
+            session_unset()
         ?>
+
+            
 
     </header>
     <hr>
