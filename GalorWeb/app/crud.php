@@ -219,7 +219,7 @@
             session_start();
         }
 
-        if(!isset($_SESSION['correo'])){
+        if(!isset($_SESSION['email'])){
 
             echo "
             <div class='sesion'>
@@ -229,7 +229,7 @@
             ";
         }else{
 
-            $datos = muestraDatosUsuario($_SESSION['correo']);
+            $datos = muestraDatosUsuario($_SESSION['email']);
 
             echo "
             <div class='perfil'>
