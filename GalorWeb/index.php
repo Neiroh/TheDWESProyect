@@ -29,6 +29,7 @@
 
         <?php
             require_once('app/crud.php');
+            //require_once('app/sesiones.php');
 
             if (isset($_POST['completarLogin'])) {
                 if (isset($_POST['correoSesion']) && isset($_POST['passSesion'])) {
@@ -37,19 +38,9 @@
 
                 iniciarSesion($_POST['correoSesion'], $_POST['passSesion']);
             }
+
+            creaHeader();
         ?>
-
-        <div class="sesion">
-            <div class="boton registro" id="openDR">Regístrate</div>
-            <div class="boton inicioSesion" id="openDL">Iniciar Sesión</div>
-
-        </div>
-
-        <div class="perfil">
-            <h3>Nombre Perfil</h3>
-            <input type="button" name="perfil" id="perfil" value="V">
-            <img src="" alt="foto_perfil" class="fotoPerfilTop">
-        </div>
 
     </header>
     <hr>
@@ -120,7 +111,6 @@
             <input type="text" class="inputBusqueda" id="inputBusqueda" placeholder="Buscador...">
             <input type="submit" name="enviaBusqueda" id="enviaBusqueda" class="enviaBusqueda boton" value=">" onclick="clearImg(); show(document.getElementById('inputBusqueda').value, page);">
         </div>
-
 
         <div class="capaGrande">
             <div class="contenedorImagenes" id="contenedorImagenes">
