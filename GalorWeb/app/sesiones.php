@@ -81,35 +81,4 @@
         }
     }
 
-    function creaHeader(){
-
-        //Iniciamos la sesión para quitarnos de errores
-        if(session_id() == ""){
-            session_start();
-        }
-
-        $datos = muestraDatosUsuario($_SESSION['correo']);
-
-        if(!isset($_SESSION['correo'])){
-
-            echo "
-            <div class='sesion'>
-                <div class='boton registro' id='openDR'>Regístrate</div>
-                <div class='boton inicioSesion' id='openDL'>Iniciar Sesión</div>
-            </div>
-            ";
-        }else{
-
-            echo "
-            <div class='perfil'>
-                <h3>", $datos['nombre'] ,"</h3>
-                <input type='button' name='perfil' id='perfil' value='V'>
-                <img src='",$datos['foto']," alt='foto_perfil' class='fotoPerfilTop'>
-            </div>
-            ";
-
-        }
-
-    }
-
 ?>

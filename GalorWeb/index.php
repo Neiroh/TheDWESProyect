@@ -29,6 +29,7 @@
 
         <?php
             require_once('app/crud.php');
+            //require_once('app/sesiones.php');
 
             if (isset($_POST['completarLogin'])) {
                 if (isset($_POST['correoSesion']) && isset($_POST['passSesion'])) {
@@ -37,6 +38,8 @@
 
                 iniciarSesion($_POST['correoSesion'], $_POST['passSesion']);
             }
+
+            creaHeader();
         ?>
 
     </header>
