@@ -102,6 +102,10 @@
                 $_SESSION['email']=$recorreConsulta->passwd;
                 $_SESSION['pass']=$recorreConsulta->correoUser;
             }
+
+            else{
+                echo '<script>document.getElementById("errorL").innerHTML="Contraseña incorrecta.";</script>';
+            }
         }
 
         else{
@@ -168,19 +172,27 @@
         }
 
         //Seleccionamos los valores desde la base de datos para mostrarlos en la página
-        $datos = $db->query("SELECT nombreUser, correoUser, fotoPerfil FROM user WHERE correoUser = '$correo'");
-        $datos->fetch_object();
+        $datos = $db->query("SELECT nombreUser, fotoPerfil FROM user WHERE correoUser = '$correo'");
 
-        //Almacenamos todos los valores en un array asociativo para devolverlos a la página desde la que se llama a la función para mostrar los datos
-        //Usar <img width='100' src='data:image/png;base64, ".base64_encode($res->fotoPerfil)."'></img> para visualizar la imagen
-        $muestra = array(
-            "nombre" => $datos->nombreUser,
-            "correo" => $correo,
-            "foto" => $datos->fotoPerfil
-        );
+        if($datos->fetch_object()){
+            //Almacenamos todos los valores en un array asociativo para devolverlos a la página desde la que se llama a la función para mostrar los datos
+            //Usar <img width='100' src='data:image/png;base64, ".base64_encode($res->fotoPerfil)."'></img> para visualizar la imagen
+            $muestra = array(
+                "nombre" => $datos->nombreUser,
+                "correo" => $correo
+            );
 
-        return $muestra;
+            if (isset($datos->fotoPerfil)) {
+                $muestra['foto']=$datos->fotoPerfil;
+            }
+            else{
+                $muestra['foto']='';
+            }
 
+
+            print_r($muestra);
+            return $muestra;
+        }
     }
 
     /*
