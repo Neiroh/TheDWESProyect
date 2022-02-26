@@ -19,9 +19,12 @@
 
 <body>
     <?php
-        require_once('app/crud.php');
+        require_once('app/sesiones.php');
 
-        
+
+        if (isset($_POST['closeSesion'])) {
+            cierraSesion();
+        }
     ?>
     <header>
 
@@ -54,9 +57,7 @@
                 iniciarSesion($_POST['correoSesion'], $_POST['passSesion']);
             }
 
-            $datos = creaHeader();
-
-            session_unset()
+            creaHeader();
         ?>
 
             
@@ -66,11 +67,13 @@
     <main>
 
         <div class="edit" id="divPerf">
-
-            <div class="miPerfil">Mi Perfil</div>
+            <form method="POST" action="perfil.php">
+                <input type="submit" class="miPerfil" id="miPerf" value="Mi Perfil"></input>
+            </form>
             <hr>
-            <div class="cerrar">Cerrar Sesión</div>
-
+            <form method="POST" action="#">
+                <input name="closeSesion" type="submit" class="cerrar" id="cerSes" value="Cerrar Sesión"></input>
+            </form>
         </div>
 
         <div class="Registro" id="divReg">
@@ -145,12 +148,16 @@
     </footer>
 
     
-    <script src="./js/index.js"></script>
     <script src="./js/ajax.js"></script>
-    <script src="./js/enter.js"></script>
-    <script src="./js/registerAjax.js"></script>
-    <script src="./js/openDivs.js"></script>
+    <script src="./js/cambiaDatos.js"></script>
     <script src="./js/clear.js"></script>
+    <script src="./js/enter.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/loginAjax.js"></script>
+    <script src="./js/openDivs.js"></script>
+    <script src="./js/registerAjax.js"></script>
+
+
 
 
 

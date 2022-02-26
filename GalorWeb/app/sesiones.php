@@ -1,6 +1,6 @@
 <?php
 
-    include "crud.php";
+    include_once("crud.php");
 
     /*Función para iniciar una sesión
     *

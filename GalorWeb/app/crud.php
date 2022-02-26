@@ -239,12 +239,19 @@
 
             $datos = muestraDatosUsuario($_SESSION['email']);
 
-            $foto = $datos['foto'];
-
-            echo "<script>console.log(".$foto."); document.getElementById('divPerfil').style.display='block'; document.getElementById('imgUser').setAttribute('src','data:image/png;base64,".base64_encode($foto)."'); document.getElementById('h3User').innerHTML ='".$datos['nombre']."'</script>";
-
-            
+            echo "<script>document.getElementById('divPerfil').style.display='block'; document.getElementById('imgUser').setAttribute('src','data:image/png;base64,".base64_encode($datos['foto'])."'); document.getElementById('h3User').innerHTML ='".$datos['nombre']."'</script>";
         }
+    }
+
+    function montaPerfil(){
+
+        if(session_id() == ""){
+            session_start();
+        }
+        
+        $datos = muestraDatosUsuario($_SESSION['email']);
+
+        echo "<script>document.getElementById('imgUser').setAttribute('src','data:image/png;base64,".base64_encode($datos['foto'])."'); document.getElementById('h2Perf').innerHTML ='".$datos['nombre']."'; document.getElementById('correo').value='".$datos['correo']."';</script>";
 
     }
     
