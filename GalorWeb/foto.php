@@ -89,7 +89,7 @@
                     <img src="images/camara.png" alt="perfil">
                     <h3><?php echo $userName;?></h3>
                     <input type="text" name="comentario" id="comentario" placeholder="Escribe tu comentario público">
-                    <input type="submit" id="subComment" class="subComment">
+                    <input type="submit" id="subComment" class="subComment" onclick="comentar(idImg, idUser, document.getElementById('comentario').value); location.reload();">
                 </div> 
 
                 <?php
@@ -119,6 +119,8 @@
     <script src="js/darLike.js"></script>
     <script src="js/quitarLike.js"></script>
     <script src="js/foto.js"></script>
+    <script src="js/comentar.js"></script>
+
 
 
 </body>
