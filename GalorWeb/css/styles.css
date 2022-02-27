@@ -372,6 +372,7 @@ main {
     flex-direction: column;
     justify-content: flex-start;
     align-self: flex-start;
+    height: auto;
 }
 
 
