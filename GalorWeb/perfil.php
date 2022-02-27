@@ -30,6 +30,8 @@
             <h1>Galor</h1>
         </div>
     </a>
+
+
     <div class='perfil' id="divPerfil">
         <input type='button' name='perfil' id='perfil' value='V' class="flecha">
         <h3 id="h3User"></h3>
@@ -92,6 +94,8 @@
     <script src="./js/cambiaDatos.js"></script>
     <script src="./js/perfil.js"></script>
     <script src="./js/openDivsPerfil.js"></script>
+    <script src="./js/index.js"></script>
+
 
     <?php 
         creaHeader();
