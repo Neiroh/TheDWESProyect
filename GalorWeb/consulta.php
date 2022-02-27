@@ -1,5 +1,7 @@
 
 <?php
+        $contFotos = 0;
+        $columna = 1;
         $query = $_GET['query'];
         $page = $_GET['page'];
         //563492ad6f91700001000001221023eb1bf342928c8800aad8ddf27c
@@ -22,10 +24,31 @@
         $img = json_decode($response, true);
 
         
+        
         foreach ($img['photos'] as $element) {
             $myImg = $element['src']['medium'];
 
-            echo '<img src="'.$myImg.'">';    
+            //echo "<script>console.log($columna)</script>";
+            //echo "<script>console.log($contFoto)</script>";
+
+            echo '<img src="'.$myImg.'">';  
+
+            /*if($contFotos <= 5){
+
+                echo "<div class='col$columna'>
+                    '<img src='$myImg'>'
+                </div>";
+
+            }else{
+
+                $contFotos = 0;
+                ++$columna;
+
+                echo "<div class='col$columna'>
+                    <img src='$myImg'>
+                </div>";
+
+            }*/
 
         }
     
