@@ -200,7 +200,34 @@ img {
     display: none;
     z-index: 5;
 }
+.login input {
+    font-family: 'Raleway', sans-serif;
+    height: 40px;
+    margin: 10px;
+    margin-right: 30px;
+    padding-left: 10px;
+    margin-bottom: 30px;
+    font-size: 0.8em;
+}
 
+/*Botón de login final*/
+
+.login .completaLogin {
+    background-color: black;
+    color: #EEEEEE;
+    font-size: 1.1em;
+    width: 250px;
+    height: 80px;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 70px;
+    margin-top: 5px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 3px 5px 5px #10A3EB;
+    cursor: pointer;
+    font-weight: bold;
+}
 .edit {
     position: absolute;
     font-family: 'Comfortaa', cursive;

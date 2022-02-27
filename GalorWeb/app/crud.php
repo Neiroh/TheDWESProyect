@@ -561,7 +561,7 @@
         for ($i=0; $i < count($datos); $i++) { 
             echo '<div class="usuario">
                     <h3>'.$datos[$i]['idUser'].'</h3>
-                    <input readonly type="text" name="comentario" id="comentario" value="'.$datos[$i]['text'].'">
+                    <input class="comentario" readonly type="text" name="comentario" id="comentario" value="'.$datos[$i]['text'].'">
                 </div>';
             
         }
