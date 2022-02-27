@@ -74,7 +74,7 @@ a {
     height: 50px;
     border-radius: 50%;
     position: relative;
-    right: 75px;
+    right: 60px;
 }
 
 .perfil {
@@ -86,6 +86,12 @@ a {
 
 .fotoPerfil {
     width: 50%;
+    height: 100px;
+}
+
+#h3User {
+    position: relative;
+    top: 50px;
 }
 
 
@@ -259,8 +265,8 @@ main {
 .guardar {
     background-color: black;
     color: #EEEEEE;
-    font-size: 1.5em;
-    width: 260px;
+    font-size: 1.2em;
+    width: 200px;
     height: 60px;
     padding: 10px;
     text-align: center;
@@ -268,6 +274,8 @@ main {
     font-family: 'Comfortaa', cursive;
     display: flex;
     align-self: flex-end;
+    margin-top: 30px;
+    margin-left: 10px;
 }
 
 

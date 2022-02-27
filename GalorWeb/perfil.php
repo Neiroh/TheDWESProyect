@@ -32,7 +32,7 @@
     </a>
     <div class='perfil' id="divPerfil">
         <h3 id="h3User"></h3>
-        <input type='button' name='perfil' id='perfil' value='V'>
+        <input type='button' name='perfil' id='perfil' value='V' class="flecha">
         <img alt='foto_perfil' class='fotoPerfilTop' id="imgUser">
     </div>
 
@@ -68,7 +68,7 @@
                         <h2 id="h2Perf"></h2>
                         <input id="usuarioIn" type="text" placeholder=" > Cambiar nombre de usuario" class="cambiarNombre">
                         <input type="hidden" id="hiddenEmail" value="<?php echo $_SESSION['email'];?>">
-                        <input type="submit" name="cambiaCorreo" id="userChange" class="boton guardar" value="Guardar cambios" onclick="changeName(sesionEmail, document.getElementById('usuarioIn').value);">
+                        <input type="submit" name="cambiaCorreo" id="userChange" class="boton guardar" value="Guardar" onclick="changeName(sesionEmail, document.getElementById('usuarioIn').value);">
                     </form>
                 </div>
             </div>
@@ -76,7 +76,7 @@
                 <form method="POST" action="perfil.php">
                     <h3>Correo</h3>
                     <input type="text" name="correo" id="correo" class="input inputCorreo">
-                    <input type="submit" value="Guardar cambios" class="boton guardar" name="guardar" onclick="changeEmail(sesionEmail, document.getElementById('correo').value);">
+                    <input type="submit" value="Guardar" class="boton guardar" name="guardar" onclick="changeEmail(sesionEmail, document.getElementById('correo').value);">
                 </form>
             </div>
 
