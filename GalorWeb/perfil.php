@@ -76,7 +76,7 @@
                 <form method="POST" action="perfil.php">
                     <h3>Correo</h3>
                     <input type="text" name="correo" id="correo" class="input inputCorreo">
-                    <input type="submit" value="Guardar" class="boton guardar" name="guardar" onclick="changeEmail(sesionEmail, document.getElementById('correo').value);">
+                    <input type="submit" value="Guardar" class="boton guardar" name="guardar" id="menosMargen" onclick="changeEmail(sesionEmail, document.getElementById('correo').value);">
                 </form>
             </div>
 
