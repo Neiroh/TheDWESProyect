@@ -41,10 +41,10 @@
             </div>
 
             <div class='perfil' id="divPerfil">
-        <img alt='foto_perfil' class='fotoPerfilTop' id="imgUser">
-        <h3 id="h3User"></h3>
-        <input type='button' name='perfil' id='perfil' value='V' class="flecha">
-    </div>
+                <input type='button' name='perfil' id='perfil' value='V' class="flecha">
+                <h3 id="h3User"></h3>
+                <img alt='foto_perfil' class='fotoPerfilTop' id="imgUser">
+            </div>
 
 
         <?php

@@ -62,11 +62,11 @@ a {
     color: #EEEEEE;
     border: 1px solid #10A3EB;
     padding: 1px;
-    margin-top: 20px
+    margin-top: 20px;
+    float: left;
 }
 
 .fotoPerfilTop {
-    float: left;
     width: 70px;
     height: 70px;
     border-radius: 50%;
