@@ -1,4 +1,10 @@
 <?php
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//FICHERO PARA SUBIR LA IMAGEN AL PERFIL DEL USUARIO
+//ESTE FICHERO NO HACE NADA MÁS QUE ESO
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 include_once('crud.php');
     if(isset($_POST["cambiaFoto"])){
         $check = getimagesize($_FILES["image"]["tmp_name"]);

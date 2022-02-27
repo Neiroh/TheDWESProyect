@@ -7,7 +7,7 @@ function fotoSola(id) {
             document.getElementById("bigFoto").setAttribute('src', this.responseText);
     };
 
-    xmlhttp.open("GET", "fotoSola.php?id=" + id, true);
+    xmlhttp.open("GET", "app/fotoSola.php?id=" + id, true);
     xmlhttp.send();
 }
 

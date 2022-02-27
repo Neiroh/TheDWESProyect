@@ -21,6 +21,6 @@
 
         $img = json_decode($response, true);
 
-        echo 'Foto titulada: '.$img['alt']. ' hecha por el increible y maravilloso fotografo: '.$img['photographer']. '.<br>El color que predonima en esta imagen, como se puede apreciar es: '. $img['avg_color'].'.';
+        echo 'Foto titulada: '.$img['alt']. '.<br>Hecha por el increible y maravilloso fotografo: '.$img['photographer']. '.<br>El color que predonima en esta imagen, como se puede apreciar es: '. $img['avg_color'].'.';
     
 

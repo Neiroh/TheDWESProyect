@@ -308,10 +308,7 @@
     }
 
     /*
-    *Función para cambiar el header en función de si se ha iniciado la sesión o si tienen que aparecer los botones de inicio 
-    *
-    *
-    *
+    *Función para cambiar el header en función de si se ha iniciado la sesión o si tienen que aparecer los botones de inicio de sesión y registro
     *
     */
     function creaHeader(){
@@ -327,6 +324,9 @@
         }
     }
 
+    /*
+    *Función para mostrar el perfil y la información del mismo en la página del perfil.php de cada usuario
+    */
     function montaPerfil(){
         
         $datos = muestraDatosUsuario($_SESSION['email']);
@@ -335,6 +335,13 @@
 
     }
     
+    /*
+    *Función para contar los likes de las imágenes
+    *
+    *@param $idImg almacena el id de la imagen de la que queremos contar los likes
+    *
+    *@return $cuentaLikes devuelve el número de likes que hemos contado en la tabla
+    */
     function cuentaLikes($idImg){
 
         $cuentaLikes = 0;
@@ -363,6 +370,13 @@
         return $cuentaLikes;
     }
 
+    /*
+    *Función para añadir un like en caso de que el usuario haya pulsado el mismo
+    *
+    *@param $idImg almacena el id de la imagen a la que queremos añadir el like
+    *@param $idUser almacena el id del usuario al que queremos añadir el like
+    *
+    */
     function añadirLike($idImg, $idUser){
         try{
             $db = new mysqli('localhost', "ahmed", "123456", "galorDB");
@@ -381,6 +395,13 @@
         $db->query("INSERT INTO likes VALUES ($idImg, $idUser)");
     }
 
+    /*
+    *Función para quitar el like de una foto a un usuario
+    *
+    *@param $idImg almacena el id de la imagen a la que queremos añadir el like
+    *@param $idUser almacena el id del usuario al que queremos añadir el like
+    *
+    */
     function quitarLike($idImg, $idUser){
 
         try{
@@ -400,6 +421,14 @@
         $db->query("DELETE FROM likes WHERE idImg = '$idImg' AND idUser = '$idUser'");
     }
 
+    /*
+    *Función para comprobar si un usuario ha dado o no like a una imagen
+    *
+    *@param $idImg almacena el id de la imagen a la que queremos añadir el like
+    *@param $idUser almacena el id del usuario al que queremos añadir el like
+    *
+    *@return devuelve true o false en función de si hay un like registrado o no
+    */
     function compruebaLike($idImg, $idUser){
 
         try{
