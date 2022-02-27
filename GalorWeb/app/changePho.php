@@ -1,6 +1,6 @@
 <?php
 
-require_once('app/crud.php');
+require_once('crud.php');
 
 $email = $_GET['email'];
 $img = $_GET['pho'];
