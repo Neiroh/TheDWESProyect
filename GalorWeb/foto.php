@@ -149,15 +149,18 @@
                     <div class="likes">
                         <?php
                         if(isset($_SESSION['email'])){
-                            if ($liked) {
-                                echo '<img src="images/heart.png" alt="foto" class="megusta" id="imgLikes" onclick="quitarLike(idImg, idUser); location.reload();">';
+                            if (isset($liked)) {
+                                if ($liked) {
+                                    echo '<img src="images/heart.png" alt="foto" class="megusta" id="imgLikes" onclick="quitarLike(idImg, idUser); location.reload();">';
+                                }
+
+                                else{
+                                    echo '<img src="images/megusta.png" alt="foto" class="megusta" id="imgLikes" onclick="console.log(123);darLike(idImg, idUser); location.reload();">';
+                                }
                             }
 
-                            else{
-                                echo '<img src="images/megusta.png" alt="foto" class="megusta" id="imgLikes" onclick="console.log(123);darLike(idImg, idUser); location.reload();">';
-                            }
                         }else{
-                            echo '<img src="images/megusta.png" alt="foto" class="megusta" id="imgLikes" onclick="console.log(123);darLike(idImg, idUser); location.reload();">';
+                            echo '<img src="images/megusta.png" alt="foto" class="megusta" id="imgLikes">';
 
                         }
                         ?>
@@ -176,7 +179,7 @@
                     <img src="images/camara.png" alt="perfil">
                     <h3><?php if(isset($userName)) {echo $userName;}?></h3>
                     <input type="text" name="comentario" class="comentario" id="comentario" placeholder="Escribe tu comentario público">
-                    <input value="Publicar Comentario" type="submit" id="subComment" class="subComment" onclick="comentar(idImg, idUser, document.getElementById('comentario').value); location.reload();">
+                    <input value="Publicar Comentario" type="submit" id="subComment" class="subComment" onclick="if(idUser){ comentar(idImg, idUser, document.getElementById('comentario').value); location.reload();}">
                 </div> 
 
                 <?php
