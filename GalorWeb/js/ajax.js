@@ -9,7 +9,7 @@ function show(query, page) {
                 document.getElementById("contenedorImagenes").innerHTML += this.responseText;
         };
 
-        xmlhttp.open("GET", "consulta.php?query=" + query + "&page=" + page, true);
+        xmlhttp.open("GET", "app/consulta.php?query=" + query + "&page=" + page, true);
         xmlhttp.send();
     }
 }

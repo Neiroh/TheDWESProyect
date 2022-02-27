@@ -23,20 +23,20 @@ function vuelveNormal() {
 function changeName(email, name) {
     var xmlhttp = new XMLHttpRequest();
 
-    xmlhttp.open("GET","changeName.php?email="+email+"&name="+name,true);
+    xmlhttp.open("GET","app/changeName.php?email="+email+"&name="+name,true);
     xmlhttp.send();
 }
 
 function changeEmail(email, email2) {
     var xmlhttp = new XMLHttpRequest();
 
-    xmlhttp.open("GET","changeEmail.php?email="+email+"&email2="+email2,true);
+    xmlhttp.open("GET","app/changeEmail.php?email="+email+"&email2="+email2,true);
     xmlhttp.send();
 }
 
 function changePho(email, $img) {
     var xmlhttp = new XMLHttpRequest();
     document.getElementById('usuarioIn').innerHTML = this.responseText;
-    xmlhttp.open("GET","changePho.php?email="+email+"&pho="+$img,true);
+    xmlhttp.open("GET","app/changePho.php?email="+email+"&pho="+$img,true);
     xmlhttp.send();
 }

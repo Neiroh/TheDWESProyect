@@ -14,7 +14,7 @@ function register(emailR, nameR, passR) {
 			else if (this.readyState == 4 && this.status == 200) paR.innerHTML = this.responseText.trim();
 		};
 
-		xmlhttp.open("GET","registro.php?email="+emailR+"&name="+nameR+"&pass="+passR,true);
+		xmlhttp.open("GET","app/registro.php?email="+emailR+"&name="+nameR+"&pass="+passR,true);
 		xmlhttp.send();
     }
 }

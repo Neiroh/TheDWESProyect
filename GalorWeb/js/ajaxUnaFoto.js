@@ -20,7 +20,7 @@ function titulo(id) {
             document.getElementById("titPho").innerHTML = this.responseText;
     };
 
-    xmlhttp.open("GET", "titulo.php?id=" + id, true);
+    xmlhttp.open("GET", "app/titulo.php?id=" + id, true);
     xmlhttp.send();
 }
 
@@ -33,7 +33,7 @@ function desc(id) {
             document.getElementById("desc").innerHTML = this.responseText;
     };
 
-    xmlhttp.open("GET", "desc.php?id=" + id, true);
+    xmlhttp.open("GET", "app/desc.php?id=" + id, true);
     xmlhttp.send();
 }
 
