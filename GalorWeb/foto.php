@@ -191,6 +191,7 @@
     <script src="js/foto.js"></script>
     <script src="js/comentar.js"></script>
     <script src="js/openDivs.js"></script>
+    <script src="js/registerAjax.js"></script>
 
 
 
