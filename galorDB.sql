@@ -15,27 +15,13 @@ CREATE TABLE IF NOT EXISTS img(
 
 CREATE TABLE IF NOT EXISTS likes(
     idImg INT NOT NULL,
-    idUser INT NOT NULL,
-    PRIMARY KEY (idImg, idUser),
-    FOREIGN KEY (idImg) REFERENCES img(idImg)
-        ON DELETE CASCADE
-        ON UPDATE CASCADE,
-    FOREIGN KEY (idUser) REFERENCES user(idUser)
-        ON DELETE CASCADE
-        ON UPDATE CASCADE
+    idUser VARCHAR(200) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS coment(
     idImg INT NOT NULL,
-    idUser INT NOT NULL,
-    text VARCHAR(10000) NOT NULL,
-    PRIMARY KEY (idImg, idUser),
-    FOREIGN KEY (idImg) REFERENCES img(idImg)
-        ON DELETE CASCADE
-        ON UPDATE CASCADE,
-    FOREIGN KEY (idUser) REFERENCES user(idUser)
-        ON DELETE CASCADE
-        ON UPDATE CASCADE
+    idUser VARCHAR(200) NOT NULL,
+    text VARCHAR(10000) NOT NULL
 );
 
 CREATE USER 'arce'@'localhost' IDENTIFIED BY '123456';

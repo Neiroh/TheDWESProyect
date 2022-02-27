@@ -24,7 +24,7 @@
         }
 
         //Subimos el id a la base de datos
-        $db->query("INSERT INTO img VALUES ($id)");
+        $db->query("INSERT INTO img VALUES ('$id')");
 
     }
 

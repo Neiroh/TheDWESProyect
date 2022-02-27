@@ -391,8 +391,14 @@
             echo $ex->getMessage(), "<br>";
 
         }
+        $consulta = $db->query("SELECT idImg from img where idImg = '$idImg'");
+        $exec = $consulta->fetch_object();
+        if (!$exec) {
+            $db->query("INSERT INTO img VALUES ('$idImg')");
+        }
 
-        $db->query("INSERT INTO likes VALUES ($idImg, $idUser)");
+        $db->query("INSERT INTO likes VALUES ('$idImg', '$idUser')");
+        echo 'hola';
     }
 
     /*
@@ -445,7 +451,7 @@
 
         }
 
-        $consulta = $db->query("SELECT $idUser FROM likes WHERE idUser = '$idUser' AND idImg = '$idImg'");
+        $consulta = $db->query("SELECT idUser FROM likes WHERE idUser = '$idUser' AND idImg = '$idImg'");
         $ejecuta = $consulta->fetch_object();
 
         if($ejecuta){

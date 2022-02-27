@@ -16,7 +16,14 @@
 </head>
 
 <body>
-    <input type="hidden" id="idP" value="<?php echo $_GET['id'];?>">
+    <?php
+        include_once ('app/crud.php');
+        $nLikes = cuentaLikes($_GET['id']);
+        $liked = compruebaLike($_GET['id'], $_SESSION['email']);
+    ?>
+    <input type="hidden" id="idImg" value="<?php echo $_GET['id'];?>">
+    <input type="hidden" id="idUser" value="<?php echo $_SESSION['email'];?>">
+
     <header>
 
         <a href="./index.php">
@@ -46,8 +53,16 @@
                                             manera serena y absolutamente natural.
                     </p>
                     <div class="likes">
-                        <img src="images/megusta.png" alt="foto" class="megusta">
-                        <p class="numLikes">32</p>
+                        <?php
+                            if ($liked) {
+                                echo '<img src="images/heart.png" alt="foto" class="megusta" id="imgLikes" onclick="quitarLike(idImg, idUser); location.reload();">';
+                            }
+
+                            else{
+                                echo '<img src="images/megusta.png" alt="foto" class="megusta" id="imgLikes" onclick="console.log(123);darLike(idImg, idUser); location.reload();">';
+                            }
+                        ?>
+                        <p class="numLikes"><?php echo $nLikes;?></p>
                     </div>
                 </div>
             </div>
@@ -74,12 +89,17 @@
     </footer>
     <script>
         window.addEventListener('load', ()=>{
-            fotoSola(document.getElementById('idP').value);
-            titulo(document.getElementById('idP').value);
-            desc(document.getElementById('idP').value);
+            fotoSola(document.getElementById('idImg').value);
+            titulo(document.getElementById('idImg').value);
+            desc(document.getElementById('idImg').value);
         });
     </script>
     <script src="js/ajaxUnaFoto.js"></script>
+    <script src="js/darLike.js"></script>
+    <script src="js/quitarLike.js"></script>
+    <script src="js/foto.js"></script>
+
+
 </body>
 
 </html>
