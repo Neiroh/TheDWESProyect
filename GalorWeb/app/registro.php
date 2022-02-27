@@ -1,7 +1,7 @@
 
 <?php
 
-    require_once('app/crud.php');
+    require_once('crud.php');
 
         $pass = $_GET['pass'];
         $email = $_GET['email'];

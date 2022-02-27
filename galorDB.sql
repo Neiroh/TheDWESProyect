@@ -16,7 +16,6 @@ CREATE TABLE IF NOT EXISTS img(
 CREATE TABLE IF NOT EXISTS likes(
     idImg INT NOT NULL,
     idUser INT NOT NULL,
-    numLikes INT,
     PRIMARY KEY (idImg, idUser),
     FOREIGN KEY (idImg) REFERENCES img(idImg)
         ON DELETE CASCADE
@@ -40,10 +39,10 @@ CREATE TABLE IF NOT EXISTS coment(
 );
 
 CREATE USER 'arce'@'localhost' IDENTIFIED BY '123456';
-GRANT ALL ON galorDB.* TO 'arce'@'localhost';
+GRANT ALL ON *.* TO 'arce'@'localhost';
 
 CREATE USER 'ahmed'@'localhost' IDENTIFIED BY '123456';
-GRANT ALL ON galorDB.* TO 'ahmed'@'localhost';
+GRANT ALL ON *.* TO 'ahmed'@'localhost';
 
 CREATE USER 'jesusro'@'localhost' IDENTIFIED BY '123456';
-GRANT ALL ON galorDB.* TO 'jesusro'@'localhost';
+GRANT ALL ON *.* TO 'jesusro'@'localhost';
