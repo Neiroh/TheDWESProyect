@@ -12,8 +12,11 @@
     #EEEEEE
     */
 }
+
+
 /********* Empieza encabezado **********/
-header{
+
+header {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -21,82 +24,99 @@ header{
     background-color: #EEEEEE;
     font-family: 'Comfortaa', cursive;
 }
-.logo img{
+
+.logo img {
     width: 100px;
 }
-hr{
+
+hr {
     border: 1.5px solid black;
 }
+
+
 /*La camara y el titulo Galor*/
-.logo{
+
+.logo {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     margin-left: 30px;
 }
-.logo h1{
+
+.logo h1 {
     text-shadow: 0px 5px 5px #10A3EB;
     font-size: 3.5em;
     margin-left: 10px;
 }
+
+
 /*Usuario y foto de perfil cuando se inicia sesión*/
-.perfil{
+
+.perfil {
     background-color: #10A3EB;
     margin-right: 30px;
 }
+
+
 /*Botones de registrarse y iniciar sesión*/
-.sesion{
+
+.sesion {
     display: flex;
     flex-flow: row;
     margin-right: 40px;
 }
-img{
+
+img {
     width: 100%;
 }
+
+
 /******** Fin de encabezado *********/
 
+
 /********* Cuerpo ***********/
-body{
-    height: 100%;
-}
-html{
-    height: 100%;
-}
-main{
+
+main {
     position: relative;
     background-color: #EEEEEE;
     display: flex;
     justify-content: center;
     height: 100%;
 }
-.info{
+
+.info {
     display: flex;
     flex-flow: column;
     width: 90%;
     margin-top: 30px;
 }
-.fotoTitulo h2{
+
+.fotoTitulo h2 {
     font-family: 'Comfortaa', cursive;
     font-size: 2.5em;
     padding-left: 25px;
     padding-top: 20px;
 }
-.titulo{
+
+.titulo {
     display: flex;
     flex-flow: column;
 }
-.titulo hr{
+
+.titulo hr {
     display: flex;
     flex-flow: column;
     margin-left: 15px;
     margin-right: 20px;
 }
-.bigFoto{
+
+.bigFoto {
     float: left;
     width: 45vw;
     border-radius: 5px;
 }
-.descripcion{
+
+.descripcion {
     font-family: 'Raleway', sans-serif;
     font-size: 1.4em;
     line-height: 35px;
@@ -104,7 +124,8 @@ main{
     margin-top: 20px;
     margin-left: 25px;
 }
-.likes{
+
+.likes {
     display: flex;
     flex-flow: row;
     justify-content: flex-end;
@@ -112,35 +133,42 @@ main{
     margin: 20px;
     margin-right: 50px;
 }
-.megusta{
+
+.megusta {
     width: 8%;
 }
-.numLikes{
+
+.numLikes {
     font-family: 'Comfortaa', cursive;
     font-size: 1.8em;
     margin: 20px
 }
-.comentarios{
+
+.comentarios {
     font-family: 'Comfortaa', cursive;
     margin: 30px;
     font-size: 1.8em;
     padding-bottom: 40px;
 }
-.usuario{
+
+.usuario {
     margin-top: 10px;
     margin-left: 50px;
 }
-.usuario img{
+
+.usuario img {
     float: left;
     width: 10%;
     margin-right: 30px;
 }
-.usuario h3{
+
+.usuario h3 {
     font-family: 'Comfortaa', cursive;
     padding: 10px;
     padding-top: 30px;
 }
-.usuario input{
+
+.usuario input {
     border-top: 0;
     border-left: 0;
     border-right: 0;
@@ -151,10 +179,18 @@ main{
     font-size: 0.8em;
     background-color: #EEEEEE;
 }
+
+.usuario input:focus-within {
+    outline: 0;
+}
+
+
 /********* Fin del Cuerpo ***********/
 
+
 /*Pie de página*/
-footer{
+
+footer {
     font-family: 'Comfortaa', cursive;
     background-color: #10A3EB;
     width: 100%;
@@ -163,9 +199,10 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position:fixed;
+    position: fixed;
     bottom: 0;
 }
+
 footer hr {
     width: 100%;
     position: fixed;
