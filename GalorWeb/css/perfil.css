@@ -56,31 +56,23 @@ a {
 /*Usuario y foto de perfil cuando se inicia sesión*/
 
 .flecha {
-    position: relative;
-    top: 50px;
-    width: 50%;
+    width: 50px;
+    height: 30px;
     background-color: black;
     color: #EEEEEE;
     border: 1px solid #10A3EB;
     padding: 1px;
-}
-
-.nombreTop {
-    position: relative;
-    top: 40px;
+    margin-top: 20px
 }
 
 .fotoPerfilTop {
-    width: 50px;
-    height: 50px;
+    float: left;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
-    position: relative;
-    right: 60px;
 }
 
 .perfil {
-    position: relative;
-    bottom: 20px;
     display: none;
     margin-right: 15px;
 }
@@ -92,8 +84,10 @@ a {
 }
 
 #h3User {
-    position: relative;
-    top: 50px;
+    float: left;
+    margin-top: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 
@@ -148,7 +142,7 @@ img {
     border-radius: 5px;
 }
 .foto{
-    margin-right: 5vw
+    margin-right: 2vw
 }
 
 .cerrar {
@@ -223,6 +217,10 @@ main {
     background-color: #EEEEEE;
     margin-left: 8vw;
     margin-bottom: 10px;
+}
+
+#h2Perf{
+    font-size: 1.1em;
 }
 
 .cambiarNombre:focus-visible {
