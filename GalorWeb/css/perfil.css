@@ -55,8 +55,37 @@ a {
 
 /*Usuario y foto de perfil cuando se inicia sesión*/
 
+.flecha {
+    position: relative;
+    top: 50px;
+    width: 50%;
+    background-color: #EEEEEE;
+    border: 1px solid #10A3EB;
+    padding: 1px;
+}
+
+.nombreTop {
+    position: relative;
+    top: 40px;
+}
+
+.fotoPerfilTop {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    right: 75px;
+}
+
 .perfil {
-    margin-right: 30px;
+    position: relative;
+    bottom: 20px;
+    display: none;
+    margin-right: 15px;
+}
+
+.fotoPerfil {
+    width: 50%;
 }
 
 

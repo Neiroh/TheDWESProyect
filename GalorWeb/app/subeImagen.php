@@ -27,7 +27,7 @@ include_once('crud.php');
             //echo $_POST['nombre'].", ".$_POST['desc'].", ".$_POST['precio'];
             //echo "INSERT INTO figura (nombreFig, descFig, precioFig, fotoFig) VALUES (".$_POST['nombre'].", ".$_POST['desc'].", ".$_POST['precio'].", '$imgContent')";
             //Insert image content into database
-            $insert = $db->query("UPDATE USER SET fotoPerfil = '$imgContent' WHERE correoUser = '".$_SESSION['email']."'");
+            $insert = $db->query("UPDATE user SET fotoPerfil = '$imgContent' WHERE correoUser = '".$_SESSION['email']."'");
             if($insert){
                 echo "<p>Archivo subido correctamente a la base de datos</p>";
             }else{
@@ -39,3 +39,16 @@ include_once('crud.php');
         }
     }
 ?>
+
+<form action="../perfil.php">
+    <input type="submit" value="Enviar">
+</form>
+
+<script>
+    window.onload = function ()
+        {
+
+		    document.forms[0].submit();
+
+        }
+</script>
