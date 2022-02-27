@@ -7,4 +7,4 @@ $idUser = $_GET['idUser'];
 $text = $_GET['text'];
 
 
-creaComentario($idUser, $idImg, $texto);
+creaComentario($idUser, $idImg, $text);
