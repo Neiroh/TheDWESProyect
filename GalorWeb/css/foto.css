@@ -57,9 +57,39 @@ hr {
 
 /*Usuario y foto de perfil cuando se inicia sesión*/
 
+.flecha {
+    width: 50px;
+    height: 30px;
+    background-color: black;
+    color: #EEEEEE;
+    border: 1px solid #10A3EB;
+    padding: 1px;
+    margin-top: 20px;
+    float: left;
+}
+
+.fotoPerfilTop {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
 .perfil {
-    background-color: #10A3EB;
-    margin-right: 30px;
+    display: none;
+    margin-right: 15px;
+}
+
+.fotoPerfil {
+    width: 75%;
+    height: 200px;
+    border-radius: 50%;
+}
+
+#h3User {
+    float: left;
+    margin-top: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 
@@ -188,7 +218,9 @@ main {
 .usuario input:focus-within {
     outline: 0;
 }
+.subComment{
 
+}
 
 /********* Fin del Cuerpo ***********/
 
