@@ -96,10 +96,11 @@ hr {
 /*Botones de registrarse y iniciar sesión*/
 
 .sesion {
-    display: flex;
+    display: none;
     flex-flow: row;
     margin-right: 40px;
 }
+
 .registro,
 .inicioSesion {
     background-color: black;
@@ -118,10 +119,10 @@ hr {
     cursor: pointer;
 }
 
-
 img {
     width: 100%;
 }
+
 
 /*Capa de registro*/
 
@@ -200,6 +201,7 @@ img {
     display: none;
     z-index: 5;
 }
+
 .login input {
     font-family: 'Raleway', sans-serif;
     height: 40px;
@@ -209,6 +211,7 @@ img {
     margin-bottom: 30px;
     font-size: 0.8em;
 }
+
 
 /*Botón de login final*/
 
@@ -228,6 +231,7 @@ img {
     cursor: pointer;
     font-weight: bold;
 }
+
 .edit {
     position: absolute;
     font-family: 'Comfortaa', cursive;
@@ -260,7 +264,8 @@ img {
     cursor: pointer;
     border-radius: 5px;
 }
-.foto{
+
+.foto {
     margin-right: 2vw
 }
 
@@ -290,6 +295,8 @@ img {
     z-index: 3;
     position: absolute;
 }
+
+
 /******** Fin de encabezado *********/
 
 
@@ -402,7 +409,8 @@ main {
 .usuario input:focus-within {
     outline: 0;
 }
-.subComment{
+
+.subComment {
     background-color: black;
     color: #EEEEEE;
     font-size: 0.6em;
@@ -414,6 +422,7 @@ main {
     font-family: 'Comfortaa', cursive;
     margin-top: 30px;
 }
+
 
 /********* Fin del Cuerpo ***********/
 
