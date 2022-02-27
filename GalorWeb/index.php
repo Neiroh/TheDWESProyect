@@ -136,7 +136,7 @@
         <div class="capaGrande">
             <div class="contenedorImagenes" id="contenedorImagenes">
             </div>
-            <button id="prev" class="prev" onclick=" ++page; show(document.getElementById('inputBusqueda').value, page); console.log(page)">Cargar más</button>
+            <button id="prev" class="prev" onclick=" ++page; show(document.getElementById('inputBusqueda').value, page); ">Cargar más</button>
         </div>
 
     </main>
