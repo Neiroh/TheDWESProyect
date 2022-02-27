@@ -338,7 +338,10 @@
         }else{
             $datos = muestraDatosUsuario($_SESSION['email']);
 
-            echo "<script>document.getElementById('divPerfil').style.display='block'; document.getElementById('imgUser').setAttribute('src','data:image/png;base64,".base64_encode($datos['foto'])."'); document.getElementById('h3User').innerHTML ='".$datos['nombre']."'</script>";
+            if(!is_null($datos)){
+                echo "<script>document.getElementById('divPerfil').style.display='block'; document.getElementById('imgUser').setAttribute('src','data:image/png;base64,".base64_encode($datos['foto'])."'); document.getElementById('h3User').innerHTML ='".$datos['nombre']."'</script>";
+
+            }
         }
     }
 

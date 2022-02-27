@@ -22,8 +22,10 @@
         if(isset($_SESSION['email'])){
             $liked = compruebaLike($_GET['id'], $_SESSION['email']);
             $datos = muestraDatosUsuario($_SESSION['email']);
-            $userName = $datos['nombre'];
-            $pic = $datos['foto'];
+            if(!is_null($datos)){
+                $userName = $datos['nombre'];
+                $pic = $datos['foto'];
+            }
         }
         
 
