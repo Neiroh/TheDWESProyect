@@ -524,7 +524,7 @@
 
     }
 
-    function montaComentario($idImg, $text){
+    function montaComentario($idImg){
 
         try{
             $db = new mysqli('localhost', "ahmed", "123456", "galorDB");
