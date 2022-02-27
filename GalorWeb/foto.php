@@ -23,6 +23,14 @@
         $datos = muestraDatosUsuario($_SESSION['email']);
         $userName = $datos['nombre'];
         $pic = $datos['foto'];
+
+            if (isset($_POST['completarLogin'])) {
+                if (isset($_POST['correoSesion']) && isset($_POST['passSesion'])) {
+                echo '<script>console.log(123);</script>';
+                }
+
+                iniciarSesion($_POST['correoSesion'], $_POST['passSesion']);
+            }
     ?>
     <input type="hidden" id="idImg" value="<?php echo $_GET['id'];?>">
     <input type="hidden" id="idUser" value="<?php echo $_SESSION['email'];?>">
