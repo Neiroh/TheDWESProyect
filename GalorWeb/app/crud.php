@@ -2,6 +2,7 @@
 
     error_reporting(E_ALL);
     ini_set('display_errors', '1');
+    session_start();
 
     /*
     *Función para crear usuarios
@@ -90,7 +91,6 @@
              //Comprobación
             if($recorreConsulta->passwd == $passwd){
                 if (!isset($_SESSION['on'])) {
-                    session_start();
                     $_SESSION['on']=true;
                 }
 
@@ -99,8 +99,8 @@
                     $_SESSION['pass']='';
                 }
 
-                $_SESSION['email']=$recorreConsulta->passwd;
-                $_SESSION['pass']=$recorreConsulta->correoUser;
+                $_SESSION['email']=$recorreConsulta->correoUser;
+                $_SESSION['pass']=$recorreConsulta->passwd;
             }
 
             else{
@@ -181,15 +181,9 @@
 
             $muestra = array(
                 "nombre" => $res->nombreUser,
-                "correo" => $correo
+                "correo" => $correo,
+                'foto' => $res->fotoPerfil
             );
-
-            if (isset($datos->fotoPerfil)) {
-                $muestra['foto']=$datos->fotoPerfil;
-            }
-            else{
-                $muestra['foto']='';
-            }
 
             return $muestra;
         }
@@ -202,7 +196,7 @@
     *@param $nombreNuevo almacena el nuevo nombre que queremos poner
     *@param $correoNuevo almacena el nuevo correo que queremos almacenar
     */
-    function editaUser($correoViejo, $nombreNuevo, $correoNuevo){
+    /*function editaUser($correoViejo, $nombreNuevo, $correoNuevo){
 
         //Comprobamos que la conexión se realice con éxito
         try{
@@ -222,21 +216,84 @@
         //Establecemos los nuevos valores
         $db->query("UPDATE user SET nombreUser = '$nombreNuevo', correoUser = '$correoNuevo' WHERE correoUser = '$correoViejo'");
 
+    }*/
+
+    function editaNombre($correo, $nombreNuevo){
+
+        //Comprobamos que la conexión se realice con éxito
+        try{
+            $db = new mysqli('localhost', "ahmed", "123456", "galorDB");
+
+            if($db->connect_errno){
+
+                throw new Exception("No se ha podido acceder a la basede datos");
+
+            }
+        }catch(Exception $ex){
+
+            echo $ex->getMessage(), "<br>";
+
+        }
+
+        //Establecemos los nuevos valores
+        $db->query("UPDATE user SET nombreUser = '$nombreNuevo' WHERE correoUser = '$correo'");
+
+    }
+
+    function editaCorreo($correo, $correoNuevo){
+
+        //Comprobamos que la conexión se realice con éxito
+        try{
+            $db = new mysqli('localhost', "ahmed", "123456", "galorDB");
+
+            if($db->connect_errno){
+
+                throw new Exception("No se ha podido acceder a la basede datos");
+
+            }
+        }catch(Exception $ex){
+
+            echo $ex->getMessage(), "<br>";
+
+        }
+
+        //Establecemos los nuevos valores
+        if($db->query("UPDATE user SET correoUser = '$correoNuevo' WHERE correoUser = '$correo'")){
+            $_SESSION['email'] = $correoNuevo;
+        }
+    }
+
+    function editaPho($correo, $img){
+
+        //Comprobamos que la conexión se realice con éxito
+        try{
+            $db = new mysqli('localhost', "ahmed", "123456", "galorDB");
+
+            if($db->connect_errno){
+
+                throw new Exception("No se ha podido acceder a la basede datos");
+
+            }
+        }catch(Exception $ex){
+
+            echo $ex->getMessage(), "<br>";
+
+        }
+        //Establecemos los nuevos valores
+
+        $img = addslashes(file_get_contents($img));
+
+        $db->query("UPDATE user SET fotoPerfil = '$img' WHERE correoUser = '$correo'");
+
     }
 
     function creaHeader(){
-
-        //Iniciamos la sesión para quitarnos de errores
-        if(session_id() == ""){
-            session_start();
-        }
 
         if(!isset($_SESSION['email'])){
 
             echo"<script>document.getElementById('divSesion').style.display='flex'; </script>";
 
         }else{
-
             $datos = muestraDatosUsuario($_SESSION['email']);
 
             echo "<script>document.getElementById('divPerfil').style.display='block'; document.getElementById('imgUser').setAttribute('src','data:image/png;base64,".base64_encode($datos['foto'])."'); document.getElementById('h3User').innerHTML ='".$datos['nombre']."'</script>";
@@ -244,13 +301,11 @@
     }
 
     function montaPerfil(){
-
-        if(session_id() == ""){
-            session_start();
-        }
         
         $datos = muestraDatosUsuario($_SESSION['email']);
 
+        print_r($datos);
+        
         echo "<script>document.getElementById('imgUser').setAttribute('src','data:image/png;base64,".base64_encode($datos['foto'])."'); document.getElementById('h2Perf').innerHTML ='".$datos['nombre']."'; document.getElementById('correo').value='".$datos['correo']."';</script>";
 
     }

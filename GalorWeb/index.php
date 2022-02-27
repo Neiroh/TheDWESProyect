@@ -57,7 +57,6 @@
                 iniciarSesion($_POST['correoSesion'], $_POST['passSesion']);
             }
 
-            creaHeader();
         ?>
 
             
@@ -158,7 +157,10 @@
     <script src="./js/registerAjax.js"></script>
 
 
+    <?php
+        creaHeader();
 
+    ?>
 
 
 </body>

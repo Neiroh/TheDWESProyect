@@ -53,12 +53,9 @@
             session_start();
         }
 
-        //Unseteamos el valor de la sesión si es que existe para quitar errores
-        if(isset($_SESSION['correo'])){
-            unset($_SESSION['correo']);
-        }
 
         //La destruimos
+        session_unset();
         session_destroy();
 
     }

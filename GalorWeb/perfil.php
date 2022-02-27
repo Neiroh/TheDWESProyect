@@ -18,23 +18,7 @@
 <body>
 
     <?php
-
-        //$correoViejo = $_SESSION['email'];
-
         require_once('app/sesiones.php');
-        //$datos = muestraDatosUsuario($correo);
-
-        if(isset($_POST['guardar'])){
-
-            editaUser($correoViejo, $_POST['usuario'], $_POST['correo']);
-
-        }
-
-        if(isset($_POST['cambiaFoto'])){
-
-            fotoPerfil($correo, $_POST['cambiaFoto']);
-
-        }
     ?>
 
 <header>
@@ -70,28 +54,29 @@
         <div class="contenedor">
             <div class="usuario">
                 <div class="foto">
-
                         <img alt="foto_perfil" id="imgPerf"><br>
-                        <input type="file" value="Cambiar foto" class="botonCambio" name="fotoPerfil"><br>
-
-                        <input type="submit" value="Cambiar foto" name="cambiaFoto" class="boton cambiaFoto" id="changePho" onclick="upPho();">
-
+                        <input type="file" value="Cambiar foto" class="botonCambio" name="fotoPerfil" id="phoFile"><br>
+                        <input type="submit" value="Cambiar foto" name="cambiaFoto" class="boton cambiaFoto" id="changePho" onclick="changePho(sesionEmail, document.getElementById('phoFile').value);">
                 </div>
 
-                <form action="#" method="post">
-
-                    <h2 id="h2Perf"></h2>
-                    <input id="usuario" type="text" placeholder=" > Cambiar nombre de usuario" class="cambiarNombre" name="usuario" onclick="cambiaDato()" readonly>
-
+                <div class="cambiosUser">
+                    <form method="POST" action="perfil.php">
+                        <h2 id="h2Perf"></h2>
+                        <input id="usuarioIn" type="text" placeholder=" > Cambiar nombre de usuario" class="cambiarNombre">
+                        <input type="hidden" id="hiddenEmail" value="<?php echo $_SESSION['email'];?>">
+                        <input type="submit" name="cambiaCorreo" id="userChange" class="boton guardar" value="Guardar cambios" onclick="changeName(sesionEmail, document.getElementById('usuarioIn').value);">
+                    </form>
+                </div>
             </div>
             <div class="correo">
-                <h3>Correo</h3>
-                <input type="text" name="correo" id="correo" class="input inputCorreo" onclick="cambiaDato()" readonly>
+                <form method="POST" action="perfil.php">
+                    <h3>Correo</h3>
+                    <input type="text" name="correo" id="correo" class="input inputCorreo">
+                    <input type="submit" value="Guardar cambios" class="boton guardar" name="guardar" onclick="changeEmail(sesionEmail, document.getElementById('correo').value);">
+                </form>
             </div>
 
-                <input type="submit" value="Guardar cambios" class="boton guardar" name="guardar" onclick="vuelveNormal()">
             
-            </form>
         </div>
 
         <div class="relleno" id="relleno"></div>
@@ -103,7 +88,6 @@
     <script src="./js/cambiaDatos.js"></script>
     <script src="./js/perfil.js"></script>
     <script src="./js/openDivsPerfil.js"></script>
-
 
     <?php 
         creaHeader();
