@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foto</title>
-    <link rel="stylesheet" href="./css/foto.css">
+    <link rel="stylesheet" href="css/foto.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
@@ -24,25 +24,21 @@
         $userName = $datos['nombre'];
         $pic = $datos['foto'];
 
-            if (isset($_POST['completarLogin'])) {
-                if (isset($_POST['correoSesion']) && isset($_POST['passSesion'])) {
-                echo '<script>console.log(123);</script>';
-                }
-
-                iniciarSesion($_POST['correoSesion'], $_POST['passSesion']);
-            }
+            
     ?>
     <input type="hidden" id="idImg" value="<?php echo $_GET['id'];?>">
     <input type="hidden" id="idUser" value="<?php echo $_SESSION['email'];?>">
 
     <header>
 
-        <a href="./index.php">
+        <a href="index.php">
             <div class="logo">
                 <img src="images/camara.png" alt="logo">
                 <h1>Galor</h1>
             </div>
         </a>
+        <p id="errorL"></p>
+
             <div class='sesion' id="divSesion">
                 <div class='boton registro' id='openDR'>Regístrate</div>
                 <div class='boton inicioSesion' id='openDL'>Iniciar Sesión</div>
@@ -53,6 +49,16 @@
                 <h3 id="h3User"></h3>
                 <img alt='foto_perfil' class='fotoPerfilTop' id="imgUser">
             </div>
+
+            <?php 
+            if (isset($_POST['completarLogin'])) {
+                if (isset($_POST['correoSesion']) && isset($_POST['passSesion'])) {
+                echo '<script>console.log(123);</script>';
+                }
+
+                iniciarSesion($_POST['correoSesion'], $_POST['passSesion']);
+            }
+            ?>
     </header>
     <hr>
     <main>
@@ -61,7 +67,7 @@
                 <input type="submit" class="miPerfil" id="miPerf" value="Mi Perfil"></input>
             </form>
             <hr>
-            <form method="POST" action="./index.php">
+            <form method="POST" action="index.php">
                 <input name="closeSesion" type="submit" class="cerrar" id="cerSes" value="Cerrar Sesión"></input>
             </form>
         </div>
@@ -190,8 +196,13 @@
     <script src="js/quitarLike.js"></script>
     <script src="js/foto.js"></script>
     <script src="js/comentar.js"></script>
+    <script src="js/cambiaDatos.js"></script>
+    <script src="js/clear.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/loginAjax.js"></script>
     <script src="js/openDivs.js"></script>
     <script src="js/registerAjax.js"></script>
+
 
 
 
