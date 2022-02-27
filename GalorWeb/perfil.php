@@ -20,12 +20,6 @@
     <?php
         require_once('app/sesiones.php');
         require_once('app/imagenDB.php');
-
-        if(isset($_POST['cambiaFoto'])){
-
-            fotoPerfil($_SESSION['email'], $_POST['image']);
-
-        }
     ?>
 
 <header>
@@ -61,9 +55,9 @@
         <div class="contenedor">
             <div class="usuario">
                 <div class="foto">
-                <img alt="foto_perfil" id="imgPerf"><br>
+                <img alt='foto_perfil' class='fotoPerfilTop' id="imgUser"><br>
 
-                        <form action="#" method="post">
+                        <form action="./app/subeImagen.php" method="post" enctype="multipart/form-data">
                             <input type="file" value="Cambiar foto" class="botonCambio" name="image" id="phoFile"><br>
                             <input type="submit" value="Cambiar foto" name="cambiaFoto" class="boton cambiaFoto" id="changePho">
                         </form>    

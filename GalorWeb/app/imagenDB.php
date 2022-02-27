@@ -50,8 +50,7 @@
 
         }
 
-        $imageF = $_FILES[$image]['tmp_name'];
-        $imgContent = addslashes(file_get_contents($imageF));
+        $imgContent = addslashes(file_get_contents($image));
 
         //Usamos las siguientes líneas para saber si tenemos que añadir una imagen o simplemente cambiarla
         $recibeImagen = $db->query("SELECT fotoPerfil FROM user WHERE correoUser = '$correo'");

@@ -303,8 +303,6 @@
     function montaPerfil(){
         
         $datos = muestraDatosUsuario($_SESSION['email']);
-
-        print_r($datos);
         
         echo "<script>document.getElementById('imgUser').setAttribute('src','data:image/png;base64,".base64_encode($datos['foto'])."'); document.getElementById('h2Perf').innerHTML ='".$datos['nombre']."'; document.getElementById('correo').value='".$datos['correo']."';</script>";
 
