@@ -80,7 +80,12 @@
                     <img src="images/camara.png" alt="perfil">
                     <h3><?php echo $userName;?></h3>
                     <input type="text" name="comentario" id="comentario" placeholder="Escribe tu comentario público">
+                    <input type="submit" id="subComent">
                 </div> 
+
+                <?php
+                    montaComent();
+                ?>
             </div>
 
         </div>

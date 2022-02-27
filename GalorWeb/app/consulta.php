@@ -4,10 +4,7 @@
         $columna = 1;
         $query = $_GET['query'];
         $page = $_GET['page'];
-        //mia: 563492ad6f91700001000001221023eb1bf342928c8800aad8ddf27c
-        //no va bien: 563492ad6f917000010000019b983f3b62fe43daa92e746d4553dd35
-        //raul: 563492ad6f91700001000001f32ac10db82a4b458304946fa28bd05a
-        $key = '563492ad6f91700001000001221023eb1bf342928c8800aad8ddf27c';
+        require_once('apiKey.php');
         $link =  "https://api.pexels.com/v1/search?query=".$query."&page=".$page; 
 
         $headers = array(

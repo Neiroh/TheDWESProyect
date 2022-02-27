@@ -540,13 +540,29 @@
 
         }
 
-        $consulta = $db->query("SELECT u.fotoPerfil, u.nombreUser, c.text, c.idImg FROM user u INNER JOIN coment c ON u.idUser = c.idUser WHERE c.idImg = '$idImg'");
+        $consulta = $db->query("SELECT * FROM coment WHERE idImg = $idImg");
+        $i =0;
 
-        if($ejecuta = $consulta->fetch_array(MYSQLI_ASSOC)){
+        while($ejecuta = $consulta->fetch_array(MYSQLI_ASSOC)){
 
-            return $ejecuta;
-            
+            $array[$i] = $ejecuta;
+            $i++;
         }
 
+        return $array;
+
+    }
+
+    function montaComent(){
+        
+        $datos = muestraDatosComentario($_GET['id']);
+        
+        for ($i=0; $i < count($datos); $i++) { 
+            echo '<div class="usuario">
+                    <h3>'.$datos[$i]['idUser'].'</h3>
+                    <input type="text" name="comentario" id="comentario" value="'.$datos[$i]['text'].'">
+                </div>';
+            
+        }
     }
 ?>
