@@ -88,7 +88,7 @@
                 <div class="usuario">
                     <img src="images/camara.png" alt="perfil">
                     <h3><?php echo $userName;?></h3>
-                    <input type="text" name="comentario" id="comentario" placeholder="Escribe tu comentario público">
+                    <input type="text" name="comentario" class="comentario" id="comentario" placeholder="Escribe tu comentario público">
                     <input type="submit" id="subComment" class="subComment" onclick="comentar(idImg, idUser, document.getElementById('comentario').value); location.reload();">
                 </div> 
 
