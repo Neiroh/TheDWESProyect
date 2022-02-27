@@ -335,4 +335,23 @@
 
         return $cuentaLikes;
     }
+
+    function añadirLike($idImg, $idUser){
+        try{
+            $db = new mysqli('localhost', "ahmed", "123456", "galorDB");
+
+            if($db->connect_errno){
+
+                throw new Exception("No se ha podido acceder a la basede datos");
+
+            }
+        }catch(Exception $ex){
+
+            echo $ex->getMessage(), "<br>";
+
+        }
+
+        $consulta = $db->query("INSERT INTO likes VALUES ($idImg, $idUser)");
+        $consulta->fetch_object();
+    }
 ?>
