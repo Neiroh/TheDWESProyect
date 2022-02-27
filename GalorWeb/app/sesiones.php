@@ -42,9 +42,6 @@
 
     /*
     *Función para DESTRUIR todas las sesiones
-    *
-    *
-    *
     */
     function cierraSesion(){
 
