@@ -43,6 +43,7 @@
                 <h1>Galor</h1>
             </div>
         </a>
+        <p id="errorL"></p>
             <div class='sesion' id="divSesion">
                 <div class='boton registro' id='openDR'>Regístrate</div>
                 <div class='boton inicioSesion' id='openDL'>Iniciar Sesión</div>
