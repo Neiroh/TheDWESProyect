@@ -19,15 +19,22 @@
     <?php
         include_once ('app/crud.php');
         $nLikes = cuentaLikes($_GET['id']);
-        $liked = compruebaLike($_GET['id'], $_SESSION['email']);
-        $datos = muestraDatosUsuario($_SESSION['email']);
-        $userName = $datos['nombre'];
-        $pic = $datos['foto'];
+        if(isset($_SESSION['email'])){
+            $liked = compruebaLike($_GET['id'], $_SESSION['email']);
+            $datos = muestraDatosUsuario($_SESSION['email']);
+            if(!is_null($datos)){
+                $userName = $datos['nombre'];
+                $pic = $datos['foto'];
+            }
+        }
+        
 
-            
+        if (isset($_POST['closeSesion'])) {
+            cierraSesion();
+        }
     ?>
     <input type="hidden" id="idImg" value="<?php echo $_GET['id'];?>">
-    <input type="hidden" id="idUser" value="<?php echo $_SESSION['email'];?>">
+    <input type="hidden" id="idUser" value="<?php if(isset($_SESSION['email'])){ echo $_SESSION['email'];}?>">
 
     <header>
 
@@ -141,6 +148,7 @@
                     </p>
                     <div class="likes">
                         <?php
+                        if(isset($_SESSION['email'])){
                             if ($liked) {
                                 echo '<img src="images/heart.png" alt="foto" class="megusta" id="imgLikes" onclick="quitarLike(idImg, idUser); location.reload();">';
                             }
@@ -148,6 +156,10 @@
                             else{
                                 echo '<img src="images/megusta.png" alt="foto" class="megusta" id="imgLikes" onclick="console.log(123);darLike(idImg, idUser); location.reload();">';
                             }
+                        }else{
+                            echo '<img src="images/megusta.png" alt="foto" class="megusta" id="imgLikes" onclick="console.log(123);darLike(idImg, idUser); location.reload();">';
+
+                        }
                         ?>
                         <p class="numLikes"><?php echo $nLikes;?></p>
                     </div>
@@ -162,7 +174,7 @@
 
                 <div class="usuario">
                     <img src="images/camara.png" alt="perfil">
-                    <h3><?php echo $userName;?></h3>
+                    <h3><?php if(isset($userName)) {echo $userName;}?></h3>
                     <input type="text" name="comentario" class="comentario" id="comentario" placeholder="Escribe tu comentario público">
                     <input value="Publicar Comentario" type="submit" id="subComment" class="subComment" onclick="comentar(idImg, idUser, document.getElementById('comentario').value); location.reload();">
                 </div> 
