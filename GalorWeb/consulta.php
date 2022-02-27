@@ -26,7 +26,7 @@
         
         
         foreach ($img['photos'] as $element) {
-            $myImg = $element['src']['medium'];
+            $myImg = $element['src']['large'];
 
             //echo "<script>console.log($columna)</script>";
             //echo "<script>console.log($contFoto)</script>";
