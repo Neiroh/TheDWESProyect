@@ -100,12 +100,169 @@ hr {
     flex-flow: row;
     margin-right: 40px;
 }
+.registro,
+.inicioSesion {
+    background-color: black;
+    color: #EEEEEE;
+    font-size: 1.4em;
+    width: 180px;
+    height: 50px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 3px 5px 5px #10A3EB;
+    cursor: pointer;
+}
+
 
 img {
     width: 100%;
 }
 
+/*Capa de registro*/
 
+.Registro {
+    position: absolute;
+    font-family: 'Comfortaa', cursive;
+    background-color: #EEEEEE;
+    text-shadow: 1px 2px 2px #10A3EB;
+    box-shadow: 3px 4px 6px black;
+    border-radius: 10px;
+    padding: 30px;
+    font-size: 2em;
+    right: 10%;
+    top: -20px;
+    height: 530px;
+    display: none;
+    z-index: 5;
+}
+
+
+/*Texto y label de registro*/
+
+.Registro input {
+    font-family: 'Raleway', sans-serif;
+    height: 40px;
+    margin: 10px;
+    margin-right: 30px;
+    padding-left: 10px;
+    margin-bottom: 30px;
+    font-size: 0.8em;
+}
+
+
+/*Botón de registro final*/
+
+.Registro .completaRegistro {
+    background-color: black;
+    color: #EEEEEE;
+    font-size: 1.1em;
+    width: 200px;
+    height: 80px;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 95px;
+    margin-top: 10px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 3px 5px 5px #10A3EB;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+/*Error de falta datos*/
+
+.Registro p:last-child {
+    margin-left: 92px;
+    color: red;
+}
+
+
+/*Capa de login (como la de registro)*/
+
+.login {
+    position: absolute;
+    font-family: 'Comfortaa', cursive;
+    background-color: #EEEEEE;
+    text-shadow: 1px 2px 2px #10A3EB;
+    box-shadow: 3px 4px 6px black;
+    border-radius: 10px;
+    padding: 30px;
+    font-size: 2em;
+    right: 2%;
+    top: -20px;
+    height: 390px;
+    display: none;
+    z-index: 5;
+}
+
+.edit {
+    position: absolute;
+    font-family: 'Comfortaa', cursive;
+    background-color: #EEEEEE;
+    text-shadow: 1px 2px 2px #10A3EB;
+    box-shadow: 3px 4px 6px black;
+    border-radius: 10px;
+    padding: 30px;
+    font-size: 2em;
+    right: 2%;
+    top: -20px;
+    height: 200px;
+    display: none;
+    z-index: 10;
+}
+
+.miPerfil {
+    height: 60px;
+    width: 100%;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Comfortaa', cursive;
+    background-color: whitesmoke;
+    box-shadow: 1px 2px 2px #10A3EB;
+    margin-bottom: 15px;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.foto{
+    margin-right: 2vw
+}
+
+.cerrar {
+    background-color: black;
+    color: #EEEEEE;
+    font-size: 1em;
+    width: 260px;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    font-family: 'Comfortaa', cursive;
+    text-align: center;
+    box-shadow: 3px 5px 5px #10A3EB;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.relleno {
+    background-color: black;
+    position: relative;
+    top: 0;
+    opacity: 50%;
+    height: 100%;
+    width: 100%;
+    display: none;
+    z-index: 3;
+    position: absolute;
+}
 /******** Fin de encabezado *********/
 
 
@@ -203,7 +360,7 @@ main {
     padding-top: 30px;
 }
 
-.usuario input {
+.comentario {
     border-top: 0;
     border-left: 0;
     border-right: 0;
@@ -219,7 +376,16 @@ main {
     outline: 0;
 }
 .subComment{
-
+    background-color: black;
+    color: #EEEEEE;
+    font-size: 0.6em;
+    width: 310px;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Comfortaa', cursive;
+    margin-top: 30px;
 }
 
 /********* Fin del Cuerpo ***********/
