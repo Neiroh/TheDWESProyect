@@ -20,6 +20,9 @@
         include_once ('app/crud.php');
         $nLikes = cuentaLikes($_GET['id']);
         $liked = compruebaLike($_GET['id'], $_SESSION['email']);
+        $datos = muestraDatosUsuario($_SESSION['email']);
+        $userName = $datos['nombre'];
+        $pic = $datos['foto'];
     ?>
     <input type="hidden" id="idImg" value="<?php echo $_GET['id'];?>">
     <input type="hidden" id="idUser" value="<?php echo $_SESSION['email'];?>">
@@ -75,7 +78,7 @@
 
                 <div class="usuario">
                     <img src="images/camara.png" alt="perfil">
-                    <h3>ARCE69</h3>
+                    <h3><?php echo $userName;?></h3>
                     <input type="text" name="comentario" id="comentario" placeholder="Escribe tu comentario público">
                 </div> 
             </div>
