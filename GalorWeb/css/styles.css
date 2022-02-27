@@ -54,7 +54,8 @@ hr {
     position: relative;
     top: 50px;
     width: 50%;
-    background-color: #EEEEEE;
+    background-color: black;
+    color: #EEEEEE;
     border: 1px solid #10A3EB;
     padding: 1px;
 }
@@ -218,6 +219,7 @@ img {
     align-items: center;
     background-color: whitesmoke;
     box-shadow: 1px 2px 2px #10A3EB;
+    font-family: 'Comfortaa', cursive;
     margin-bottom: 15px;
     padding: 5px;
     cursor: pointer;
@@ -228,10 +230,11 @@ img {
     background-color: black;
     color: #EEEEEE;
     font-size: 1em;
-    width: 250px;
+    width: 260px;
     padding: 10px;
     margin-top: 15px;
     border-radius: 5px;
+    font-family: 'Comfortaa', cursive;
     text-align: center;
     box-shadow: 3px 5px 5px #10A3EB;
     cursor: pointer;

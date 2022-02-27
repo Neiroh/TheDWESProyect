@@ -68,7 +68,7 @@
                         <h2 id="h2Perf"></h2>
                         <input id="usuarioIn" type="text" placeholder=" > Cambiar nombre de usuario" class="cambiarNombre">
                         <input type="hidden" id="hiddenEmail" value="<?php echo $_SESSION['email'];?>">
-                        <input type="submit" name="cambiaCorreo" id="userChange" class="boton guardar" value="Guardar" onclick="changeName(sesionEmail, document.getElementById('usuarioIn').value);">
+                        <input type="submit" name="cambiaCorreo" id="userChange" class="guardarNombre" value="Guardar nombre de Usuario" onclick="changeName(sesionEmail, document.getElementById('usuarioIn').value);">
                     </form>
                 </div>
             </div>
@@ -76,7 +76,7 @@
                 <form method="POST" action="perfil.php">
                     <h3>Correo</h3>
                     <input type="text" name="correo" id="correo" class="input inputCorreo">
-                    <input type="submit" value="Guardar" class="boton guardar" name="guardar" id="menosMargen" onclick="changeEmail(sesionEmail, document.getElementById('correo').value);">
+                    <input type="submit" value="Guardar Correo" class="guardarCorreo" name="guardar" id="menosMargen" onclick="changeEmail(sesionEmail, document.getElementById('correo').value);">
                 </form>
             </div>
 
