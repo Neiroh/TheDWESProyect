@@ -1,7 +1,7 @@
 
 <?php
-        $contFotos = 0;
-        $columna = 1;
+        $cont = 0;
+        $array = [];
         $query = $_GET['query'];
         $page = $_GET['page'];
         require_once('apiKey.php');
@@ -25,27 +25,21 @@
         foreach ($img['photos'] as $element) {
             $myImg = $element['src']['large'];
 
-            //echo "<script>console.log($columna)</script>";
-            //echo "<script>console.log($contFoto)</script>";
-            echo "<img class='clickable' src='".$myImg."' value='".$element['id']."' onclick='location.href=`foto.php?id=".$element['id']."`'>";  
+            $array[$cont] = "<img class='clickable' src='$myImg' value='".$element['id']."' onclick='location.href=foto.php?id=".$element['id']."'>";
 
-            /*if($contFotos <= 5){
-
-                echo "<div class='col$columna'>
-                    '<img src='$myImg'>'
-                </div>";
-
-            }else{
-
-                $contFotos = 0;
-                ++$columna;
-
-                echo "<div class='col$columna'>
-                    <img src='$myImg'>
-                </div>";
-
-            }*/
-
+            $cont++;
         }
-    
+        
+        for($i = 0; $i < 15; $i++){
 
+            if($i == 5 || $i == 10 || $i == 15){
+                echo "</div>";
+
+            }
+
+            if($i == 0 || $i == 5 || $i == 10){
+                echo "<div class='col'>";
+            }
+
+                echo $array[$i];
+        }
