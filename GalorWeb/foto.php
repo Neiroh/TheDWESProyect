@@ -19,10 +19,12 @@
     <input type="hidden" id="idP" value="<?php echo $_GET['id'];?>">
     <header>
 
+        <a href="./index.php">
         <div class="logo">
             <img src="images/camara.png" alt="logo">
             <h1>Galor</h1>
         </div>
+        </a>
 
     </header>
     <hr>

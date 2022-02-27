@@ -308,5 +308,31 @@
 
     }
     
+    function cuentaLikes($idImg){
 
+        $cuentaLikes = 0;
+
+        //Comprobamos que la conexión se realice con éxito
+        try{
+            $db = new mysqli('localhost', "ahmed", "123456", "galorDB");
+
+            if($db->connect_errno){
+
+                throw new Exception("No se ha podido acceder a la basede datos");
+
+            }
+        }catch(Exception $ex){
+
+            echo $ex->getMessage(), "<br>";
+
+        }
+
+        $consulta = $db->query("SELECT idImg FROM likes WHERE idImg = '$idImg'");
+
+        while($likes = $consulta->fetch_object()){
+            $cuentaLikes++;
+        }
+
+        return $cuentaLikes;
+    }
 ?>
