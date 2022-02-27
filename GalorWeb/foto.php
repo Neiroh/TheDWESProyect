@@ -30,12 +30,21 @@
     <header>
 
         <a href="./index.php">
-        <div class="logo">
-            <img src="images/camara.png" alt="logo">
-            <h1>Galor</h1>
-        </div>
+            <div class="logo">
+                <img src="images/camara.png" alt="logo">
+                <h1>Galor</h1>
+            </div>
         </a>
+            <div class='sesion' id="divSesion">
+                <div class='boton registro' id='openDR'>Regístrate</div>
+                <div class='boton inicioSesion' id='openDL'>Iniciar Sesión</div>
+            </div>
 
+            <div class='perfil' id="divPerfil">
+                <input type='button' name='perfil' id='perfil' value='V' class="flecha">
+                <h3 id="h3User"></h3>
+                <img alt='foto_perfil' class='fotoPerfilTop' id="imgUser">
+            </div>
     </header>
     <hr>
     <main>
@@ -84,7 +93,11 @@
                 </div> 
 
                 <?php
-                    montaComent();
+                    if (muestraDatosComentario($_GET['id'])) {
+                        montaComent();
+                    }
+                    creaHeader();
+
                 ?>
             </div>
 

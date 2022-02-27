@@ -548,8 +548,9 @@
             $array[$i] = $ejecuta;
             $i++;
         }
-
-        return $array;
+        if (isset($array)) {
+            return $array;
+        }
 
     }
 
