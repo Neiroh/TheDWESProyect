@@ -218,6 +218,13 @@
 
     }*/
 
+    /*
+    *Función para editar el nombre de usuario
+    *
+    *@param $correo almacena el correo del usuario cuyo nombre queremos cambiar
+    *@param $nombreNuevo almacena el nuevo nombre de usuario que queremos poner al usuario que lo solicita
+    *
+    */
     function editaNombre($correo, $nombreNuevo){
 
         //Comprobamos que la conexión se realice con éxito
@@ -240,6 +247,13 @@
 
     }
 
+    /*
+    *Función para editar el correo
+    *
+    *@param $correo almacena el correo que usaba anteriormente el usuario en nuestra página
+    *@param $correoNuevo almacena el correo que el usuario ha decidido usar de ahora en adelante
+    *
+    */
     function editaCorreo($correo, $correoNuevo){
 
         //Comprobamos que la conexión se realice con éxito
@@ -263,6 +277,12 @@
         }
     }
 
+    /*
+    *Función para cambiar la foto de perfil del usuario
+    *
+    *@param $correo almacena el correo del usuario que quiere cambiar la foto
+    *@param $img almacena la imagen que quiere añadir el usuario
+    */
     function editaPho($correo, $img){
 
         //Comprobamos que la conexión se realice con éxito
@@ -287,6 +307,13 @@
 
     }
 
+    /*
+    *Función para cambiar el header en función de si se ha iniciado la sesión o si tienen que aparecer los botones de inicio 
+    *
+    *
+    *
+    *
+    */
     function creaHeader(){
 
         if(!isset($_SESSION['email'])){
