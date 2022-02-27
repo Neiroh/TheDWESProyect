@@ -24,7 +24,9 @@
         $userName = $datos['nombre'];
         $pic = $datos['foto'];
 
-            
+        if (isset($_POST['closeSesion'])) {
+            cierraSesion();
+        }
     ?>
     <input type="hidden" id="idImg" value="<?php echo $_GET['id'];?>">
     <input type="hidden" id="idUser" value="<?php echo $_SESSION['email'];?>">
