@@ -483,4 +483,44 @@
         }
 
     }
+
+    function creaComentario($idUser, $idImg, $texto){
+
+        try{
+            $db = new mysqli('localhost', "ahmed", "123456", "galorDB");
+
+            if($db->connect_errno){
+
+                throw new Exception("No se ha podido acceder a la basede datos");
+
+            }
+        }catch(Exception $ex){
+
+            echo $ex->getMessage(), "<br>";
+
+        }
+
+        $db->query("INSERT INTO coment VALUES ('$idImg', '$idUser', '$texto')");
+
+    }
+
+    function borraComentario($idUser, $idImg, $texto){
+
+        try{
+            $db = new mysqli('localhost', "ahmed", "123456", "galorDB");
+
+            if($db->connect_errno){
+
+                throw new Exception("No se ha podido acceder a la basede datos");
+
+            }
+        }catch(Exception $ex){
+
+            echo $ex->getMessage(), "<br>";
+
+        }
+
+        $db->query("DELETE FROM coment WHERE idImg = '$idImg' AND idUser = '$idUser' AND text = '$texto'");
+
+    }
 ?>
