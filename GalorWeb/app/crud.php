@@ -256,6 +256,8 @@
     */
     function editaCorreo($correo, $correoNuevo){
 
+        $comprueba = true;
+
         //Comprobamos que la conexión se realice con éxito
         try{
             $db = new mysqli('localhost', "ahmed", "123456", "galorDB");
@@ -271,9 +273,25 @@
 
         }
 
-        //Establecemos los nuevos valores
-        if($db->query("UPDATE user SET correoUser = '$correoNuevo' WHERE correoUser = '$correo'")){
-            $_SESSION['email'] = $correoNuevo;
+        $consulta = $db->query("SELECT correoUser FROM user");
+
+        while($ejecuta = $consulta->fetch_object()){
+
+            if($ejecuta->correoUser == $correoNuevo){
+
+                $comprueba = false;
+
+            }
+
+        }
+
+        if($comprueba){
+
+            //Establecemos los nuevos valores
+            if($db->query("UPDATE user SET correoUser = '$correoNuevo' WHERE correoUser = '$correo'")){
+                $_SESSION['email'] = $correoNuevo;
+            }
+
         }
     }
 
