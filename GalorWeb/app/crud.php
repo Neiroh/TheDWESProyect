@@ -523,4 +523,30 @@
         $db->query("DELETE FROM coment WHERE idImg = '$idImg' AND idUser = '$idUser' AND text = '$texto'");
 
     }
+
+    function montaComentario($idImg, $text){
+
+        try{
+            $db = new mysqli('localhost', "ahmed", "123456", "galorDB");
+
+            if($db->connect_errno){
+
+                throw new Exception("No se ha podido acceder a la basede datos");
+
+            }
+        }catch(Exception $ex){
+
+            echo $ex->getMessage(), "<br>";
+
+        }
+
+        $consulta = $db->query("SELECT u.fotoPerfil, u.nombreUser, c.text, c.idImg FROM user u INNER JOIN coment c ON u.idUser = c.idUser WHERE c.idImg = '$idImg'");
+
+        if($ejecuta = $consulta->fetch_array(MYSQLI_ASSOC)){
+
+            return $ejecuta;
+            
+        }
+
+    }
 ?>
