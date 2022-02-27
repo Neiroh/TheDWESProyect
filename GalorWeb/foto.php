@@ -159,7 +159,7 @@
                     <img src="images/camara.png" alt="perfil">
                     <h3><?php echo $userName;?></h3>
                     <input type="text" name="comentario" class="comentario" id="comentario" placeholder="Escribe tu comentario público">
-                    <input value="" type="submit" id="subComment" class="subComment" onclick="comentar(idImg, idUser, document.getElementById('comentario').value); location.reload();">
+                    <input value="Publicar Comentario" type="submit" id="subComment" class="subComment" onclick="comentar(idImg, idUser, document.getElementById('comentario').value); location.reload();">
                 </div> 
 
                 <?php
@@ -191,6 +191,7 @@
     <script src="js/foto.js"></script>
     <script src="js/comentar.js"></script>
     <script src="js/openDivs.js"></script>
+    <script src="js/registerAjax.js"></script>
 
 
 
