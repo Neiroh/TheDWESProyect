@@ -55,7 +55,7 @@
         <div class="contenedor">
             <div class="usuario">
                 <div class="foto">
-                <img alt='foto_perfil' class='fotoPerfilTop' id="imgUser"><br>
+                <img alt='foto_perfil' class='fotoPerfilTop' id="imgPerfil"><br>
 
                         <form action="./app/subeImagen.php" method="post" enctype="multipart/form-data">
                             <input type="file" value="Cambiar foto" class="botonCambio" name="image" id="phoFile"><br>

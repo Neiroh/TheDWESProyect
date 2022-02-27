@@ -304,7 +304,7 @@
         
         $datos = muestraDatosUsuario($_SESSION['email']);
         
-        echo "<script>document.getElementById('imgUser').setAttribute('src','data:image/png;base64,".base64_encode($datos['foto'])."'); document.getElementById('h2Perf').innerHTML ='".$datos['nombre']."'; document.getElementById('correo').value='".$datos['correo']."';</script>";
+        echo "<script>document.getElementById('imgPerfil').setAttribute('src','data:image/png;base64,".base64_encode($datos['foto'])."'); document.getElementById('h2Perf').innerHTML ='".$datos['nombre']."'; document.getElementById('correo').value='".$datos['correo']."';</script>";
 
     }
     
