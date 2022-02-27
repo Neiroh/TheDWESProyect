@@ -30,8 +30,7 @@
 
             //echo "<script>console.log($columna)</script>";
             //echo "<script>console.log($contFoto)</script>";
-
-            echo '<img src="'.$myImg.'">';  
+            echo "<img src='".$myImg."' value='".$element['id']."' onclick='location.href=`foto.php?id=".$element['id']."`'>";  
 
             /*if($contFotos <= 5){
 

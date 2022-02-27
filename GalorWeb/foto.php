@@ -16,7 +16,7 @@
 </head>
 
 <body>
-
+    <input type="hidden" id="idP" value="<?php echo $_GET['id'];?>">
     <header>
 
         <div class="logo">
@@ -31,11 +31,11 @@
         <div class="info">
 
             <div class="fotoTitulo">
-                <img src="images/paisaje.jpg" alt="foto" class="bigFoto">
+                <img alt="foto" class="bigFoto" id="bigFoto">
                 <div class="titulo">
-                    <h2>Camino a la libertad</h2>
+                    <h2 id="titPho">Camino a la libertad</h2>
                     <hr>
-                    <p class="descripcion">El lugar produce sensación de quietud,
+                    <p class="descripcion" id="desc">El lugar produce sensación de quietud,
                                             calma, tranquilidad. También de soledad,
                                             pues no se ve ningún rastro de seres
                                             animados en todo él. Puede parecer que
@@ -70,7 +70,14 @@
     <hr>
         <h3>2º Desarrollo de Aplicaciones Web en Entorno Servidor</h3>
     </footer>
-
+    <script>
+        window.addEventListener('load', ()=>{
+            fotoSola(document.getElementById('idP').value);
+            titulo(document.getElementById('idP').value);
+            desc(document.getElementById('idP').value);
+        });
+    </script>
+    <script src="js/ajaxUnaFoto.js"></script>
 </body>
 
 </html>
