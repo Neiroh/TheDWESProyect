@@ -61,7 +61,7 @@
                 <input type="submit" class="miPerfil" id="miPerf" value="Mi Perfil"></input>
             </form>
             <hr>
-            <form method="POST" action="#">
+            <form method="POST" action="./index.php">
                 <input name="closeSesion" type="submit" class="cerrar" id="cerSes" value="Cerrar Sesión"></input>
             </form>
         </div>
