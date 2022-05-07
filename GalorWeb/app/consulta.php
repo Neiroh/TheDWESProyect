@@ -25,7 +25,7 @@
         foreach ($img['photos'] as $element) {
             $myImg = $element['src']['large'];
 
-            $array[$cont] = "<img class='clickable' src='".$myImg."' value='".$element['id']."' onclick='location.href=`foto.php?id=".$element['id']."`'>";
+            $array[$cont] = "<img class='clickable' src='$myImg' value='".$element['id']."' onclick='location.href=foto.php?id=".$element['id']."'>";
 
             $cont++;
         }
