@@ -1,5 +1,4 @@
-CREATE DATABASE IF NOT EXISTS galorDB;
-USE galorDB;
+USE arceuta;
 
 CREATE TABLE IF NOT EXISTS user(
 	idUser INT PRIMARY KEY AUTO_INCREMENT,
@@ -23,12 +22,3 @@ CREATE TABLE IF NOT EXISTS coment(
     idUser VARCHAR(200) NOT NULL,
     text VARCHAR(10000) NOT NULL
 );
-
-CREATE USER 'arce'@'localhost' IDENTIFIED BY '123456';
-GRANT ALL ON *.* TO 'arce'@'localhost';
-
-CREATE USER 'ahmed'@'localhost' IDENTIFIED BY '123456';
-GRANT ALL ON *.* TO 'ahmed'@'localhost';
-
-CREATE USER 'jesusro'@'localhost' IDENTIFIED BY '123456';
-GRANT ALL ON *.* TO 'jesusro'@'localhost';

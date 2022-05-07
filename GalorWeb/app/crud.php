@@ -16,7 +16,7 @@
 
         //Intentamos iniciar la conexión en la base de datos
         try{
-            $db = new mysqli('localhost', "ahmed", "123456", "galorDB");
+            $db = new mysqli('mysql.photodaw.com', "arceuta", "arceuta-2022", "arceuta");
 
             if($db->connect_errno){
 
@@ -71,7 +71,7 @@
     function iniciarSesion($correo, $passwd){
         
         try{
-            $db = new mysqli('localhost', "ahmed", "123456", "galorDB");
+            $db = new mysqli('mysql.photodaw.com', "arceuta", "arceuta-2022", "arceuta");
 
             if($db->connect_errno){
 
@@ -129,7 +129,7 @@
 
         //Comprobamos que la conexión se realice con éxito
         try{
-            $db = new mysqli('localhost', "ahmed", "123456", "galorDB");
+            $db = new mysqli('mysql.photodaw.com', "arceuta", "arceuta-2022", "arceuta");
 
             if($db->connect_errno){
 
@@ -158,7 +158,7 @@
 
         //Comprobamos que la conexión se realice con éxito
         try{
-            $db = new mysqli('localhost', "ahmed", "123456", "galorDB");
+            $db = new mysqli('mysql.photodaw.com', "arceuta", "arceuta-2022", "arceuta");
 
             if($db->connect_errno){
 
@@ -200,7 +200,7 @@
 
         //Comprobamos que la conexión se realice con éxito
         try{
-            $db = new mysqli('localhost', "ahmed", "123456", "galorDB");
+            $db = new mysqli('mysql.photodaw.com', "arceuta", "arceuta-2022", "arceuta");
 
             if($db->connect_errno){
 
@@ -229,7 +229,7 @@
 
         //Comprobamos que la conexión se realice con éxito
         try{
-            $db = new mysqli('localhost', "ahmed", "123456", "galorDB");
+            $db = new mysqli('mysql.photodaw.com', "arceuta", "arceuta-2022", "arceuta");
 
             if($db->connect_errno){
 
@@ -260,7 +260,7 @@
 
         //Comprobamos que la conexión se realice con éxito
         try{
-            $db = new mysqli('localhost', "ahmed", "123456", "galorDB");
+            $db = new mysqli('mysql.photodaw.com', "arceuta", "arceuta-2022", "arceuta");
 
             if($db->connect_errno){
 
@@ -305,7 +305,7 @@
 
         //Comprobamos que la conexión se realice con éxito
         try{
-            $db = new mysqli('localhost', "ahmed", "123456", "galorDB");
+            $db = new mysqli('mysql.photodaw.com', "arceuta", "arceuta-2022", "arceuta");
 
             if($db->connect_errno){
 
@@ -369,7 +369,7 @@
 
         //Comprobamos que la conexión se realice con éxito
         try{
-            $db = new mysqli('localhost', "ahmed", "123456", "galorDB");
+            $db = new mysqli('mysql.photodaw.com', "arceuta", "arceuta-2022", "arceuta");
 
             if($db->connect_errno){
 
@@ -400,7 +400,7 @@
     */
     function añadirLike($idImg, $idUser){
         try{
-            $db = new mysqli('localhost', "ahmed", "123456", "galorDB");
+            $db = new mysqli('mysql.photodaw.com', "arceuta", "arceuta-2022", "arceuta");
 
             if($db->connect_errno){
 
@@ -432,7 +432,7 @@
     function quitarLike($idImg, $idUser){
 
         try{
-            $db = new mysqli('localhost', "ahmed", "123456", "galorDB");
+            $db = new mysqli('mysql.photodaw.com', "arceuta", "arceuta-2022", "arceuta");
 
             if($db->connect_errno){
 
@@ -459,7 +459,7 @@
     function compruebaLike($idImg, $idUser){
 
         try{
-            $db = new mysqli('localhost', "ahmed", "123456", "galorDB");
+            $db = new mysqli('mysql.photodaw.com', "arceuta", "arceuta-2022", "arceuta");
 
             if($db->connect_errno){
 
@@ -490,7 +490,7 @@
     function creaComentario($idUser, $idImg, $texto){
 
         try{
-            $db = new mysqli('localhost', "ahmed", "123456", "galorDB");
+            $db = new mysqli('mysql.photodaw.com', "arceuta", "arceuta-2022", "arceuta");
 
             if($db->connect_errno){
 
@@ -510,7 +510,7 @@
     function borraComentario($idUser, $idImg, $texto){
 
         try{
-            $db = new mysqli('localhost', "ahmed", "123456", "galorDB");
+            $db = new mysqli('mysql.photodaw.com', "arceuta", "arceuta-2022", "arceuta");
 
             if($db->connect_errno){
 
@@ -530,7 +530,7 @@
     function muestraDatosComentario($idImg){
 
         try{
-            $db = new mysqli('localhost', "ahmed", "123456", "galorDB");
+            $db = new mysqli('mysql.photodaw.com', "arceuta", "arceuta-2022", "arceuta");
 
             if($db->connect_errno){
 

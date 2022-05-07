@@ -17,10 +17,10 @@ include_once('crud.php');
             */
             
             //DB details
-            $dbHost     = 'localhost';
-            $dbUsername = 'ahmed';
-            $dbPassword = '123456'; // Change password
-            $dbName     = 'galorDB';
+            $dbHost     = 'mysql.photodaw.com';
+            $dbUsername = 'arceuta';
+            $dbPassword = 'arceuta-2022'; // Change password
+            $dbName     = 'arceuta';
             
             //Create connection and select DB
             $db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);

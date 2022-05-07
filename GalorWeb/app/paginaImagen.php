@@ -14,7 +14,7 @@
 
         //Comprobamos que la conexión se realice con éxito
         try{
-            $db = new mysqli('localhost', "arce", "123456", "galorDB");
+            $db = new mysqli('mysql.photodaw.com', "arceuta", "arceuta-2022", "arceuta");
 
             if($db->connect_errno){
 
